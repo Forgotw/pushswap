@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_main.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/02 15:05:58 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/03 16:33:09 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,15 @@ void    ft_rev_printflist(t_list *pslist)
 
 void    ft_printflist(t_list *pslist)
 {
-    pslist = ft_ps_lstfirst(pslist);
-    while (pslist->next != NULL)
+    size_t  i;
+
+    i = 0;
+    write (1, "T\n", 2);
+    while (i <= pslist->len)
     {
         printf("pslist: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
         pslist = pslist->next;
-        if (pslist->next == NULL)
-            printf("pslist: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
+        i++;
     }
 }
 
@@ -70,8 +72,8 @@ int main(int argc, char **argv)
         i++;
     }
     printf("\n%i\n", (int)ft_arraylen(array));
-    //ft_printflist(pslist);
     ft_ps_index(tab, pslist);
+    write (1, "T2\n", 3);
     ft_printflist(pslist);
     ft_sa(pslist);
     ft_printflist(pslist);

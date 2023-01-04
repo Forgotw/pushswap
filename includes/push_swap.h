@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/02 15:11:29 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/03 16:40:13 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 typedef	struct	s_list
 {
@@ -23,6 +24,7 @@ typedef	struct	s_list
 	size_t			len;
 	struct s_list	*next;
     struct s_list   *prev;
+	int				end;
 }				t_list;
 
 
@@ -34,6 +36,7 @@ void    ft_ps_a(t_list *lst);
 t_list  *ft_ps_lstnew(int content);
 t_list  *ft_ps_lstlast(t_list *lst);
 t_list  *ft_ps_lstfirst(t_list *lst);
+void    ft_assign_top_bot(t_list *pslist);
 char    **ft_ps_arg_split(int argc, char **argv);
 int 	ft_ps_check_digit(char **array);
 int 	*ft_array_to_tab(char **array);
