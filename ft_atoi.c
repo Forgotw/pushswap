@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:51:55 by lsohler           #+#    #+#             */
-/*   Updated: 2022/12/12 15:09:15 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/04 11:10:45 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_atoi(const char *str)
 
 long int	ft_atoilong(const char *str)
 {
-	int	        i;
-	long int    sign;
+	int			i;
+	long int	sign;
 	long int	res;
 
 	i = 0;

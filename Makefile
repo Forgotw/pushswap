@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+         #
+#    By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 11:52:44 by lsohler@stu       #+#    #+#              #
-#    Updated: 2023/01/03 14:29:51 by lsohler@stu      ###   ########.fr        #
+#    Updated: 2023/01/04 13:33:09 by lsohler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC			= gcc
 FLAGS		= -Wall -Werror -Wextra
 RM			= rm -f
 SRCS		= ft_atoi.c ft_isdigit.c ft_itoa.c ft_ps_check.c ft_ps_index.c ft_ps_main.c ft_ps_utils.c \
-			ft_strcmp.c ft_swap.c ft_split.c \
+			ft_strcmp.c ft_swap.c ft_split.c ft_rotate.c \
 
 
 all:

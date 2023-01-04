@@ -6,22 +6,22 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:21:44 by lsohler           #+#    #+#             */
-/*   Updated: 2022/12/12 15:36:09 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/04 11:02:01 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_strcmp(char *str1, char *str2)
+int	ft_strcmp(char *str1, char *str2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str1[i] || str2[i])
-    {
-        if (str1[i] != str2[i])
-            return (0);
-        i++;
-    }
-    return (1);
+	i = 0;
+	while (str1[i] || str2[i])
+	{
+		if (str1[i] != str2[i])
+			return (0);
+		i++;
+	}
+	return (1);
 }
