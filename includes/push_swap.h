@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/07 16:22:38 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/10 15:09:05 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,25 @@
 typedef	struct	s_list
 {
 	size_t			index;
-	size_t			pos;
 	int 			content;
 	size_t			len;
 	struct s_list	*next;
     struct s_list   *prev;
-	int				end;
 }				t_list;
+
+typedef	struct	s_pos
+{
+	size_t		index;
+	size_t		pos;
+	size_t		start;
+}				t_pos;
+
+typedef	struct	s_range
+{
+	size_t		x;
+	size_t		y;
+	size_t		len;
+}				t_range;
 
 
 size_t	ft_arraylen(char **array);
@@ -54,8 +66,8 @@ void	ft_rr(t_list **pilea, t_list **pileb);
 void	ft_rra(t_list **pile);
 void	ft_rrb(t_list **pile);
 void	ft_rrr(t_list **pilea, t_list **pileb);
-void	ft_pa(t_list **pile_a, t_list **pile_b);
-void	ft_pb(t_list **pile_a, t_list **pile_b);
+size_t	ft_pa(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
+size_t	ft_pb(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
 
 
 

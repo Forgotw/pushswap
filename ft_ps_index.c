@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_index.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 09:35:32 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/06 13:24:46 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/10 13:40:24 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,19 @@ int	*ft_ps_sort_tab(int *tab, size_t len)
 void	ft_ps_index(int *tab, t_list **ps_list)
 {
 	size_t	y;
+	size_t	i;
 	int		*sorted_tab;
 
 	y = 0;
+	i = 0;
 	sorted_tab = ft_ps_sort_tab(tab, (*ps_list)->len);
 	while (y < (*ps_list)->len)
 	{
 		if (sorted_tab[y] == (*ps_list)->content)
 		{
 			(*ps_list)->index = y + 1;
-			if ((*ps_list)->pos == (*ps_list)->len)
+			i++;
+			if (i == (*ps_list)->len)
 			{
 				break ;
 			}

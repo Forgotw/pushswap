@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:31:57 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/07 11:48:58 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/10 13:33:42 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,12 @@ t_list	*ft_split_to_list(int *tab, char **array)
 	i = 0;
 	pslist = ft_ps_lstnew(tab[i]);
 	pslist->len = x;
-	pslist->pos = 1;
 	top = pslist;
 	while (++i != x)
 	{
 		pslist->next = ft_ps_lstnew((int)tab[i]);
 		pslist->next->prev = pslist;
 		pslist = pslist->next;
-		pslist->pos = pslist->prev->pos + 1;
 		pslist->len = x;
 	}
 	pslist->next = top;

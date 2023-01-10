@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_main.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/07 16:59:26 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/10 13:36:54 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 	{
 		if (pslist && i < lena)
 		{
-			printf("pile a: %i  index: %i  len: %i pos: %i       ", pslist->content, (int)pslist->index, (int)pslist->len, (int)pslist->pos);
+			printf("pile a: %i  index: %i  len: %i       ", pslist->content, (int)pslist->index, (int)pslist->len);
 			pslist = pslist->next;
 		}
 		if (i >= lena)
 			printf("pile a vide");
 		if (pslist2 && i < lenb)
 		{
-			printf("pile b: %i  index: %i  len: %i pos: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len, (int)pslist2->pos);
+			printf("pile b: %i  index: %i  len: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len);
 			pslist2 = pslist2->next;
 		}
 		if (i >= lenb)
@@ -66,7 +66,7 @@ void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 	i = 0;
 	while (i < lena)
 	{
-		printf("pile a: %i  index: %i  len: %i pos: %i\n", pslist->content, (int)pslist->index, (int)pslist->len, (int)pslist->pos);
+		printf("pile a: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
 		pslist = pslist->next;
 		i++;
 	}
@@ -74,7 +74,7 @@ void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 	printf("\n\n\n");
 	while (i < lenb)
 	{
-			printf("pile b: %i  index: %i  len: %i pos: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len, (int)pslist2->pos);
+			printf("pile b: %i  index: %i  len: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len);
 			pslist2 = pslist2->next;
 			i++;
 	}
@@ -128,17 +128,25 @@ int	main(int argc, char **argv)
 		{
 			ft_rra(&pile_a);
 		}
+		if (ft_strcmp("rrr", buf) == 1)
+		{
+			ft_rrr(&pile_a, &pile_b);
+		}
 		if (ft_strcmp("pa", buf) == 1)
 		{
-			ft_pa(&pile_a, &pile_b);
-			lena += 1;
-			lenb -= 1;
+			if (ft_pa(&pile_a, &pile_b, lena, lenb) == 1)
+			{
+				lena += 1;
+				lenb -= 1;
+			}
 		}
 		if (ft_strcmp("pb", buf) == 1)
 		{
-			ft_pb(&pile_a, &pile_b);
-			lena -= 1;
-			lenb += 1;
+			if (ft_pb(&pile_a, &pile_b, lena, lenb) == 1)
+			{
+				lena -= 1;
+				lenb += 1;
+			}
 		}
 	}
 }
