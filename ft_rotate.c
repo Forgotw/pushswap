@@ -3,25 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 13:05:01 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/04 14:58:01 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/06 13:27:33 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-static void	ft_rotate(t_list *pslist)
+static void	ft_rotate(t_list **pslist)
 {
 	//t_list *tmp;
-	t_list	*bot;
-	t_list	*top;
-	size_t	i;
-	t_list	*pslist2;
-
-	if (!pslist || pslist->next == NULL)
+	//t_list	*bot;
+	//t_list	*top;
+	if (!pslist || (*pslist)->next == NULL)
 		return ;
+	*pslist = (*pslist)->next;
 	/*tmp = pslist;
 	tmp->prev = pslist->prev->prev;
 	pslist->prev->pos = 1;
@@ -30,6 +28,7 @@ static void	ft_rotate(t_list *pslist)
 	tmp->pos = tmp->prev->pos + 1;
 	tmp->next = pslist;
 	*/
+	/*
 	bot = pslist;
 	top = pslist->next;
 	top->pos = 1;
@@ -40,41 +39,22 @@ static void	ft_rotate(t_list *pslist)
 	bot->next = top;
 	pslist->prev = bot;
 	pslist = top;
-	i = 0;
-	pslist2 = NULL;
-	while (i < pslist->len)
-	{
-		if (pslist)
-		{
-			printf("RApile a: %i  index: %i  len: %i pos: %i       ", pslist->content, (int)pslist->index, (int)pslist->len, (int)pslist->pos);
-			pslist = pslist->next;
-		}
-		if (!pslist)
-			printf("pile a vide");
-		if (pslist2)
-		{
-			printf("RApile b: %i  index: %i  len: %i pos: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len, (int)pslist2->pos);
-			pslist2 = pslist2->next;
-		}
-		if (!pslist2)
-			printf("pile b vide\n");
-		i++;
-	}
+	*/
 }
 
-void	ft_ra(t_list *pile)
+void	ft_ra(t_list **pile)
 {
 	ft_rotate(pile);
 	write (1, "ra\n", 3);
 }
 
-void	ft_rb(t_list *pile)
+void	ft_rb(t_list **pile)
 {
 	ft_rotate(pile);
 	write (1, "rb\n", 3);
 }
 
-void	ft_rr(t_list *pile_a, t_list *pile_b)
+void	ft_rr(t_list **pile_a, t_list **pile_b)
 {
 	ft_rotate(pile_a);
 	ft_rotate(pile_b);
