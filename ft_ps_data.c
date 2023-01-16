@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:31:24 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/16 13:24:46 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 17:06:18 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	ps_data_range(t_data *ps_data, size_t range_x, size_t range_y)
 {
 	ps_data->x = range_x;
 	ps_data->y = range_y;
-	//ps_data->len = lenght;
 }
 
 void	ps_find_data(t_data *ps_data, size_t i, size_t p)
