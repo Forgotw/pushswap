@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:19:36 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/16 15:30:10 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 17:58:46 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	{
 		ps_rotate_to_find(pile_a, ps_data);
 		ft_pb(pile_a, pile_b, ps_data);
+		if (ps_data->index < (ps_data->x + ((ps_data->y - ps_data->x) / 2)))
+		{
+			ft_rb(pile_b);
+			printf("ooooooooooooooooooTEST RB\n");
+		}
 		if (i == ps_data->y)
 		{
 			ps_data->x = i + 1;
