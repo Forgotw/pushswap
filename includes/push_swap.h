@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/16 11:16:02 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/16 15:12:43 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef	struct	s_list
 {
 	size_t			index;
 	int 			content;
-	size_t			len;
+	//size_t			len;
 	struct s_list	*next;
     struct s_list   *prev;
 }				t_list;
@@ -30,6 +30,7 @@ typedef	struct s_data
 {
 	size_t		index;
 	size_t		pos;
+	size_t		len;
 	size_t		lena;
 	size_t		lenb;
 	size_t		x;
@@ -38,21 +39,6 @@ typedef	struct s_data
 }				t_data;
 
 
-typedef	struct	s_pos
-{
-	size_t		index;
-	size_t		pos;
-	int			pile;
-	size_t		start;
-}				t_pos;
-
-typedef	struct	s_range
-{
-	size_t		x;
-	size_t		y;
-	size_t		len;
-	int			pile;
-}				t_range;
 
 
 size_t	ft_arraylen(char **array);
@@ -70,7 +56,7 @@ int 	*ft_array_to_tab(char **array);
 int 	ft_ps_check_int(char **array, int *tab);
 int 	ft_ps_check_double(int *tab, int arraylen);
 int		ft_ps_check_error(char **array, int *tab, int argc);
-void    ft_ps_index(int *tab, t_list **ps_list);
+void    ft_ps_index(int *tab, t_list **ps_list, size_t len);
 void    ft_sa(t_list **pile);
 void	ft_sb(t_list **pile);
 void	ft_ss(t_list **pilea, t_list **pileb);
@@ -80,12 +66,14 @@ void	ft_rr(t_list **pilea, t_list **pileb);
 void	ft_rra(t_list **pile);
 void	ft_rrb(t_list **pile);
 void	ft_rrr(t_list **pilea, t_list **pileb);
-size_t	ft_pa(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
-size_t	ft_pb(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
+void	ft_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	ft_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 
-t_range *ft_ps_new_range(size_t x, size_t y, size_t len, int pile);
-t_pos	*ft_ps_find(t_range *range, t_list *pile_top, t_list *pile_bot);
-void	rotate_to_find(t_list **pile, t_pos *find, t_range *range);
+
+void	ps_rotate_to_find(t_list **pile, t_data *ps_data);
+t_data	*ps_new_data(size_t lenght);
+void	ps_data_range(t_data *ps_data, size_t range_x, size_t range_y);
+void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 
 
 char		**ft_split(char *s, char c);

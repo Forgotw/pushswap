@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:31:57 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/10 13:33:42 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:15:31 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,12 @@ t_list	*ft_split_to_list(int *tab, char **array)
 		x++;
 	i = 0;
 	pslist = ft_ps_lstnew(tab[i]);
-	pslist->len = x;
 	top = pslist;
 	while (++i != x)
 	{
 		pslist->next = ft_ps_lstnew((int)tab[i]);
 		pslist->next->prev = pslist;
 		pslist = pslist->next;
-		pslist->len = x;
 	}
 	pslist->next = top;
 	top->prev = pslist;

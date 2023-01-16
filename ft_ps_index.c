@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 09:35:32 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/10 13:40:24 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:14:40 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	*ft_ps_sort_tab(int *tab, size_t len)
 	return (tab);
 }
 
-void	ft_ps_index(int *tab, t_list **ps_list)
+void	ft_ps_index(int *tab, t_list **ps_list, size_t len)
 {
 	size_t	y;
 	size_t	i;
@@ -42,14 +42,14 @@ void	ft_ps_index(int *tab, t_list **ps_list)
 
 	y = 0;
 	i = 0;
-	sorted_tab = ft_ps_sort_tab(tab, (*ps_list)->len);
-	while (y < (*ps_list)->len)
+	sorted_tab = ft_ps_sort_tab(tab, len);
+	while (y < len)
 	{
 		if (sorted_tab[y] == (*ps_list)->content)
 		{
 			(*ps_list)->index = y + 1;
 			i++;
-			if (i == (*ps_list)->len)
+			if (i == len)
 			{
 				break ;
 			}

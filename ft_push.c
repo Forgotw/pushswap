@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:47:28 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/12 14:05:03 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/16 14:06:38 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,35 @@ size_t	ft_push(t_list **pile_s, t_list **pile_d, size_t len_s, size_t len_d)
 	}
 }
 
-size_t	ft_pa(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b)
+void	ft_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 {
+	/*printf("ps_data pa i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)(*ps_data)->index, (int)(*ps_data)->pos, (int)(*ps_data)->len, (int)(*ps_data)->lena, (int)(*ps_data)->lenb, (int)(*ps_data)->x, (int)(*ps_data)->y, (*ps_data)->pile);
 	write (1, "pa\n", 3);
-	return (ft_push(pile_b, pile_a, len_b, len_a));
+	if (ft_push(pile_b, pile_a, (*ps_data)->lenb, (*ps_data)->lena) == 1)
+	{
+		(*ps_data)->lena += 1;
+		(*ps_data)->lenb -= 1;
+	}*/
+	printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
+	write (1, "pa\n", 3);
+	if (ps_data->lenb != 0)
+	{
+		ft_push(pile_b, pile_a, ps_data->lenb, ps_data->lena);
+		printf("test pb\n");
+		ps_data->lena += 1;
+		ps_data->lenb -= 1;
+	}
 }
 
-size_t	ft_pb(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b)
+void	ft_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 {
+	printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
 	write (1, "pb\n", 3);
-	return (ft_push(pile_a, pile_b, len_a, len_b));
+	if (ps_data->lena != 0)
+	{
+		ft_push(pile_a, pile_b, ps_data->lena, ps_data->lenb);
+		printf("test pb\n");
+		ps_data->lenb += 1;
+		ps_data->lena -= 1;
+	}
 }

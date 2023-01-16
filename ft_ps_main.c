@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_main.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/16 11:18:44 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/16 15:13:04 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_rev_printflist(t_list *pslist)
 	}
 }
 */
+/*
 void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 {
 	size_t	i;
@@ -58,7 +59,7 @@ void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 		i++;
 	}
 }
-
+*/
 void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 {
 	size_t	i;
@@ -66,7 +67,7 @@ void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 	i = 0;
 	while (i < lena)
 	{
-		printf("pile a: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
+		printf("pile a: %i  index: %i \n", pslist->content, (int)pslist->index);
 		pslist = pslist->next;
 		i++;
 	}
@@ -74,7 +75,7 @@ void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 	printf("\n\n\n");
 	while (i < lenb)
 	{
-			printf("pile b: %i  index: %i  len: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len);
+			printf("pile b: %i  index: %i\n", pslist2->content, (int)pslist2->index);
 			pslist2 = pslist2->next;
 			i++;
 	}
@@ -88,17 +89,12 @@ int	main(int argc, char **argv)
 	t_list	*pile_b;
 	int		*tab;
 	char	buf[20];
-	size_t	lena;
-	size_t	lenb;
-	t_pos	*find;
-	t_range	*range;
+	t_data	*ps_data;
 	int	ibuf;
 	int	ibuf2;
+	size_t	len;
 
 	pile_b = NULL;
-	//ibuf = 0;
-	//ibuf2= 0;
-	(void)pile_b;
 	array = ft_ps_arg_split(argc, argv);
 	tab = ft_array_to_tab(array);
 	if (ft_ps_check_error(array, tab, argc) == 0)
@@ -108,19 +104,18 @@ int	main(int argc, char **argv)
 	}
 	tab = ft_array_to_tab(array);
 	pile_a = ft_split_to_list(tab, array);
-	ft_ps_index(tab, &pile_a);
-	lena = pile_a->len;
-	lenb = 0;
+	len = ft_arraylen(array);
+	ft_ps_index(tab, &pile_a, len);
+	ps_data = ps_new_data(len);
+	//lena = pile_a->len;
+	//lenb = 0;
 	while (ft_strcmp(buf, "exit") == 0)
 	{
 		scanf("%s", buf);
-		if (ft_strcmp("print", buf) == 1)
-		{
-			ft_printflist(pile_a, pile_b, lena, lenb) ;
-		}
 		if (ft_strcmp("printab", buf) == 1)
 		{
-			ft_printab(pile_a, pile_b, lena, lenb) ;
+			printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
+			ft_printab(pile_a, pile_b, ps_data->lena, ps_data->lenb);
 		}
 		if (ft_strcmp("sa", buf) == 1)
 		{
@@ -140,19 +135,21 @@ int	main(int argc, char **argv)
 		}
 		if (ft_strcmp("pa", buf) == 1)
 		{
-			if (ft_pa(&pile_a, &pile_b, lena, lenb) == 1)
+			ft_pa(&pile_a, &pile_b, ps_data);
+			/*if (ft_pa(&pile_a, &pile_b, ps_data) == 1)
 			{
 				lena += 1;
 				lenb -= 1;
-			}
+			}*/
 		}
 		if (ft_strcmp("pb", buf) == 1)
 		{
-			if (ft_pb(&pile_a, &pile_b, lena, lenb) == 1)
+			ft_pb(&pile_a, &pile_b, ps_data);
+			/*if (ft_pb(&pile_a, &pile_b, ps_data) == 1)
 			{
 				lena -= 1;
 				lenb += 1;
-			}
+			}*/
 		}
 		if (ft_strcmp("find", buf) == 1)
 		{
@@ -160,14 +157,12 @@ int	main(int argc, char **argv)
 			scanf("%i", &ibuf);
 			scanf("%i", &ibuf2);
 			printf("The range is %i to %i\n", ibuf, ibuf2);
-			range = ft_ps_new_range((size_t)ibuf, (size_t)ibuf2, lena, 1);
-			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
-			find = ft_ps_find(range, pile_a, pile_a->prev);
-			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
-			range = ft_ps_new_range((size_t)ibuf, (size_t)ibuf2, lena, 1);
-			printf("FIND MAIN index: %i pos: %i start: %i\n", (int)find->index, (int)find->pos, (int)find->start);
-			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
-			rotate_to_find(&pile_a, find, range);
+			ps_data_range(ps_data, (size_t)ibuf, (size_t)ibuf2);
+			ps_rotate_to_find(&pile_a, ps_data);
+		}
+		if (ft_strcmp("sort", buf) == 1)
+		{
+			ft_pre_sort(&pile_a, &pile_b ,ps_data);
 		}
 	}
 }
