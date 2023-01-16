@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_main.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/10 13:36:54 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 11:18:44 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,14 @@ int	main(int argc, char **argv)
 	char	buf[20];
 	size_t	lena;
 	size_t	lenb;
+	t_pos	*find;
+	t_range	*range;
+	int	ibuf;
+	int	ibuf2;
 
 	pile_b = NULL;
+	//ibuf = 0;
+	//ibuf2= 0;
 	(void)pile_b;
 	array = ft_ps_arg_split(argc, argv);
 	tab = ft_array_to_tab(array);
@@ -147,6 +153,21 @@ int	main(int argc, char **argv)
 				lena -= 1;
 				lenb += 1;
 			}
+		}
+		if (ft_strcmp("find", buf) == 1)
+		{
+			printf("Enter range of number to find:\n");
+			scanf("%i", &ibuf);
+			scanf("%i", &ibuf2);
+			printf("The range is %i to %i\n", ibuf, ibuf2);
+			range = ft_ps_new_range((size_t)ibuf, (size_t)ibuf2, lena, 1);
+			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
+			find = ft_ps_find(range, pile_a, pile_a->prev);
+			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
+			range = ft_ps_new_range((size_t)ibuf, (size_t)ibuf2, lena, 1);
+			printf("FIND MAIN index: %i pos: %i start: %i\n", (int)find->index, (int)find->pos, (int)find->start);
+			printf("RANGE MAIN x: %i y: %i len: %i pile: %i\n", (int)range->x, (int)range->y, (int)range->len, (int)range->pile);
+			rotate_to_find(&pile_a, find, range);
 		}
 	}
 }

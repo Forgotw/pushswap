@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/10 15:09:05 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/16 11:16:02 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,23 @@ typedef	struct	s_list
     struct s_list   *prev;
 }				t_list;
 
+typedef	struct s_data
+{
+	size_t		index;
+	size_t		pos;
+	size_t		lena;
+	size_t		lenb;
+	size_t		x;
+	size_t		y;
+	char		pile;
+}				t_data;
+
+
 typedef	struct	s_pos
 {
 	size_t		index;
 	size_t		pos;
+	int			pile;
 	size_t		start;
 }				t_pos;
 
@@ -38,6 +51,7 @@ typedef	struct	s_range
 	size_t		x;
 	size_t		y;
 	size_t		len;
+	int			pile;
 }				t_range;
 
 
@@ -69,8 +83,9 @@ void	ft_rrr(t_list **pilea, t_list **pileb);
 size_t	ft_pa(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
 size_t	ft_pb(t_list **pile_a, t_list **pile_b, size_t len_a, size_t len_b);
 
-
-
+t_range *ft_ps_new_range(size_t x, size_t y, size_t len, int pile);
+t_pos	*ft_ps_find(t_range *range, t_list *pile_top, t_list *pile_bot);
+void	rotate_to_find(t_list **pile, t_pos *find, t_range *range);
 
 
 char		**ft_split(char *s, char c);

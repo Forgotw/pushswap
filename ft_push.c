@@ -3,48 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:47:28 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/10 13:20:58 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/12 14:05:03 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
-static void	ft_push(t_list **pile_s, t_list **pile_d)
-{
-	t_list	*push;
 
-	if (*pile_s == NULL)
-		return;
-	push = *pile_s;
-	(*pile_s)->prev->next = (*pile_s)->next;
-	(*pile_s)->next->prev = (*pile_s)->prev;
-	*pile_s = (*pile_s)->next;
-	if ((*pile_s)->index == (*pile_s)->next->index)
-		*pile_s = NULL;
-	push->next = *pile_d;
-	if (*pile_d != NULL)
-	{
-		push->prev = (*pile_d)->prev;
-		(*pile_d)->prev = push;
-		if ((*pile_d)-> next == NULL)
-		{
-			(*pile_d)->next = push;
-			(*pile_d)->prev = push;
-		}
-		else
-		{
-			push->prev = (*pile_d)->prev;
-			(*pile_d)->prev = push;
-		}
-	}
-	else
-		push->prev = NULL;
-	*pile_d = push;
-}*/
-//extrait une pile de s(pile_s->next->prev = pile_s->prev, pile_s->prev->next = pile_s->next)
 t_list	*ft_pa_extract(t_list **pile_s, size_t len_s)
 {
 	t_list	*push;
@@ -62,6 +29,7 @@ t_list	*ft_pa_extract(t_list **pile_s, size_t len_s)
 	push->prev = NULL;
 	return (push);
 }
+
 void	ft_pa_insert(t_list *insert, t_list **pile_d, size_t len_d)
 {
 	if (len_d > 1)
