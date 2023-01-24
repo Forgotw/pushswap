@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=url
-command=/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake;-P;/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/download-sfml-populate.cmake;COMMAND;/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake;-P;/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/verify-sfml-populate.cmake;COMMAND;/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake;-P;/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/extract-sfml-populate.cmake
-source_dir=/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-src
-work_dir=/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps
+command=/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake;-P;/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/download-sfml-populate.cmake;COMMAND;/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake;-P;/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/verify-sfml-populate.cmake;COMMAND;/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake;-P;/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/extract-sfml-populate.cmake
+source_dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-src
+work_dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps
 url(s)=https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-sources.zip
 hash=
 no_extract=

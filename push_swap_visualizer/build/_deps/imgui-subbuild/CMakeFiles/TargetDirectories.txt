@@ -1,3 +1,3 @@
-/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir
-/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/edit_cache.dir
-/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/rebuild_cache.dir
+/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir
+/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/edit_cache.dir
+/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/rebuild_cache.dir

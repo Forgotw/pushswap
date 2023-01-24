@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_post_sort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:39:20 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/24 12:16:02 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/24 16:04:30 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,13 +95,40 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		if ((*pile_b) == NULL)
 			break ;
 	}
-	while ((*pile_a)->index != ps_data->index + 1)
-		ft_ra(pile_a);
-	if (ps_data->pos > ps_data->lenb / 2 && *pile_b)
+	while ((*pile_a)->index != ps_data->index + 1 && *pile_b)
+	{
+		//printf("test 1\n");
+		if ((*pile_a)->index + 1 == (*pile_b)->next->index)
+		{
+			//printf("test 2\n");
+			ft_sb(pile_b);
+			ft_ra(pile_a);
+			ft_pa(pile_a, pile_b, ps_data);
+		}
+		if (ps_where_is_last_sorted(*pile_a, ps_data) == 1)
+		{
+			//printf("test 3\n");
+			ft_ra(pile_a);
+		}
+		else if (ps_where_is_last_sorted(*pile_a, ps_data) == 0)
+		{
+			//printf("test 4\n");
+			ft_rra(pile_a);
+		}
+		if (ps_data->lenb == 1)
+			break ;
+	}
+	if (ps_data->pos + 1 > ps_data->lenb / 2 && *pile_b)
+	{
 		ft_rrb(pile_b);
-	ft_pa(pile_a, pile_b, ps_data);
+	}
+	if ((*pile_b)->index == (*pile_a)->index - 1)
+		ft_pa(pile_a, pile_b, ps_data);
 	while ((*pile_a)->prev->index == (*pile_a)->index - 1)
+	{
 		ft_rra(pile_a);
+		//printf("test 2\n");
+	}
 }
 	// quand on est sur pile_b->index = ps_data->index
 	// tant que pile_a->index != ps_data->index + 1;

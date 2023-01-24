@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:31:57 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/19 20:21:20 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/24 15:57:36 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,9 @@ int ps_sorted_check(t_list *pile_a, t_data *ps_data)
 	size_t	i;
 
 	i = 1;
-	while (pile_a->index == pile_a->next->index + 1)
+	if (pile_a->index != 1)
+		return (0);
+	while (pile_a->index + 1 == pile_a->next->index)
 	{
 		pile_a = pile_a->next;
 		i++;
@@ -79,4 +81,22 @@ int ps_sorted_check(t_list *pile_a, t_data *ps_data)
 	if (i == ps_data->lena)
 		return (1);
 	return (0);
+}
+
+int	ps_where_is_last_sorted(t_list *pile_a, t_data *ps_data)
+{
+	size_t	i;
+
+	i = 1;
+	//printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
+	while (pile_a->index - 1 == pile_a->prev->index)
+	{
+		pile_a = pile_a->next;
+		i++;
+	}
+	//printf("%i\n", (int)i);
+	if (i > ps_data->lena / 2)
+		return (0);
+	else
+		return (1);
 }

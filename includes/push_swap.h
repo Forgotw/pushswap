@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/19 20:34:10 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/24 15:35:50 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	ft_rrr(t_list **pilea, t_list **pileb);
 void	ft_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 void	ft_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 int 	ps_sorted_check(t_list *pile_a, t_data *ps_data);
+int		ps_where_is_last_sorted(t_list *pile_a, t_data *ps_data);
 
 
 void	ps_rotate_to_find(t_list **pile, t_data *ps_data);

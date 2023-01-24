@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate-complete.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate-complete.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-build.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-build.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-configure.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-configure.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-download.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-download.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-install.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-install.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-mkdir.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-mkdir.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-patch.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-patch.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-test.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-test.rule"
 		},
 		{
-			"file" : "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-update.rule"
+			"file" : "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-update.rule"
 		}
 	],
 	"target" : 

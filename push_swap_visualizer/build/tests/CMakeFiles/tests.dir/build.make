@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
+CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
+RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/pushswap42/push_swap_visualizer
+CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build
+CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/tests.dir/depend.make
@@ -70,32 +70,32 @@ include tests/CMakeFiles/tests.dir/progress.make
 include tests/CMakeFiles/tests.dir/flags.make
 
 tests/CMakeFiles/tests.dir/test_queues.cpp.o: tests/CMakeFiles/tests.dir/flags.make
-tests/CMakeFiles/tests.dir/test_queues.cpp.o: /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_queues.cpp
+tests/CMakeFiles/tests.dir/test_queues.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/tests/test_queues.cpp
 tests/CMakeFiles/tests.dir/test_queues.cpp.o: tests/CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/tests.dir/test_queues.cpp.o"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/test_queues.cpp.o -MF CMakeFiles/tests.dir/test_queues.cpp.o.d -o CMakeFiles/tests.dir/test_queues.cpp.o -c /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_queues.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/tests.dir/test_queues.cpp.o"
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/test_queues.cpp.o -MF CMakeFiles/tests.dir/test_queues.cpp.o.d -o CMakeFiles/tests.dir/test_queues.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/tests/test_queues.cpp
 
 tests/CMakeFiles/tests.dir/test_queues.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/test_queues.cpp.i"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_queues.cpp > CMakeFiles/tests.dir/test_queues.cpp.i
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/tests/test_queues.cpp > CMakeFiles/tests.dir/test_queues.cpp.i
 
 tests/CMakeFiles/tests.dir/test_queues.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/test_queues.cpp.s"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_queues.cpp -o CMakeFiles/tests.dir/test_queues.cpp.s
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/tests/test_queues.cpp -o CMakeFiles/tests.dir/test_queues.cpp.s
 
 tests/CMakeFiles/tests.dir/test_pushswap.cpp.o: tests/CMakeFiles/tests.dir/flags.make
-tests/CMakeFiles/tests.dir/test_pushswap.cpp.o: /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_pushswap.cpp
+tests/CMakeFiles/tests.dir/test_pushswap.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/tests/test_pushswap.cpp
 tests/CMakeFiles/tests.dir/test_pushswap.cpp.o: tests/CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/tests.dir/test_pushswap.cpp.o"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/test_pushswap.cpp.o -MF CMakeFiles/tests.dir/test_pushswap.cpp.o.d -o CMakeFiles/tests.dir/test_pushswap.cpp.o -c /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_pushswap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/tests.dir/test_pushswap.cpp.o"
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/test_pushswap.cpp.o -MF CMakeFiles/tests.dir/test_pushswap.cpp.o.d -o CMakeFiles/tests.dir/test_pushswap.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/tests/test_pushswap.cpp
 
 tests/CMakeFiles/tests.dir/test_pushswap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/test_pushswap.cpp.i"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_pushswap.cpp > CMakeFiles/tests.dir/test_pushswap.cpp.i
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/tests/test_pushswap.cpp > CMakeFiles/tests.dir/test_pushswap.cpp.i
 
 tests/CMakeFiles/tests.dir/test_pushswap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/test_pushswap.cpp.s"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests/test_pushswap.cpp -o CMakeFiles/tests.dir/test_pushswap.cpp.s
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/tests/test_pushswap.cpp -o CMakeFiles/tests.dir/test_pushswap.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \
@@ -109,23 +109,23 @@ bin/tests: tests/CMakeFiles/tests.dir/test_queues.cpp.o
 bin/tests: tests/CMakeFiles/tests.dir/test_pushswap.cpp.o
 bin/tests: tests/CMakeFiles/tests.dir/build.make
 bin/tests: src/libVisualizerLib.a
-bin/tests: _deps/imgui-sfml-build/libImGui-SFML.dylib
+bin/tests: _deps/imgui-sfml-build/libImGui-SFML.a
 bin/tests: _deps/sfml-build/lib/libsfml-graphics.2.5.1.dylib
 bin/tests: _deps/sfml-build/lib/libsfml-window.2.5.1.dylib
 bin/tests: _deps/sfml-build/lib/libsfml-system.2.5.1.dylib
 bin/tests: tests/CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/tests"
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/tests"
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/tests.dir/build: bin/tests
 .PHONY : tests/CMakeFiles/tests.dir/build
 
 tests/CMakeFiles/tests.dir/clean:
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/tests.dir/clean
 
 tests/CMakeFiles/tests.dir/depend:
-	cd /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosohler/projectc2/pushswap42/push_swap_visualizer /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/tests /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lsohler/pushswap/push_swap_visualizer /Users/lsohler/pushswap/push_swap_visualizer/tests /Users/lsohler/pushswap/push_swap_visualizer/build /Users/lsohler/pushswap/push_swap_visualizer/build/tests /Users/lsohler/pushswap/push_swap_visualizer/build/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/tests.dir/depend
 

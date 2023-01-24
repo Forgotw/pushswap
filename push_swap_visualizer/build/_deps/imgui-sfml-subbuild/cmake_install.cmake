@@ -1,4 +1,4 @@
-# Install script for directory: /Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
+# Install script for directory: /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

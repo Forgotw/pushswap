@@ -8,16 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/src/main.cpp" "src/CMakeFiles/visualizer.dir/main.cpp.o" "gcc" "src/CMakeFiles/visualizer.dir/main.cpp.o.d"
+  "/Users/lsohler/pushswap/push_swap_visualizer/src/main.cpp" "src/CMakeFiles/visualizer.dir/main.cpp.o" "gcc" "src/CMakeFiles/visualizer.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/src/CMakeFiles/VisualizerLib.dir/DependInfo.cmake"
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/DependInfo.cmake"
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/DependInfo.cmake"
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/DependInfo.cmake"
-  "/Users/leosohler/projectc2/pushswap42/push_swap_visualizer/build/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
+  "/Users/lsohler/pushswap/push_swap_visualizer/build/src/CMakeFiles/VisualizerLib.dir/DependInfo.cmake"
+  "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/DependInfo.cmake"
+  "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/DependInfo.cmake"
+  "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/DependInfo.cmake"
+  "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

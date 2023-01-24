@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_pre_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:19:36 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/19 20:19:53 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/01/24 16:27:41 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ps_sort_3(t_list **pile_a, t_data *ps_data)
 {
+	//printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
 	if (ps_sorted_check(*pile_a, ps_data) == 1)
 		return ;
+	//printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
 	if ((*pile_a)->index == ps_data->len)
 		ft_ra(pile_a);
 	else if ((*pile_a)->next->index == ps_data->len)
@@ -34,7 +36,7 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	//range_x = 1;
 	//range_y = (ps_data->len / 3);
 	ps_data->x = 1;
-	ps_data->y = (ps_data->len / 3);
+	ps_data->y = (ps_data->len / 5);
 	i = 1;
 	while (ps_data->lena > 3)
 	{
@@ -48,7 +50,7 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		if (i == ps_data->y)
 		{
 			ps_data->x = i + 1;
-			ps_data->y = i + (ps_data->lena / 3);
+			ps_data->y = i + (ps_data->lena / 4);
 			//printf("           ps_data->x: %i ps_data->y: %i\n", (int)ps_data->x, (int)ps_data->y);
 			if ((ps_data->y - ps_data->x) < 3)
 			{
