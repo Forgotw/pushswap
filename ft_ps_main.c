@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_main.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/16 15:13:04 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/24 12:15:46 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,10 @@ int	main(int argc, char **argv)
 	t_list	*pile_a;
 	t_list	*pile_b;
 	int		*tab;
-	char	buf[20];
+	//char	buf[20];
 	t_data	*ps_data;
-	int	ibuf;
-	int	ibuf2;
+	//int	ibuf;
+	//int	ibuf2;
 	size_t	len;
 
 	pile_b = NULL;
@@ -109,7 +109,7 @@ int	main(int argc, char **argv)
 	ps_data = ps_new_data(len);
 	//lena = pile_a->len;
 	//lenb = 0;
-	while (ft_strcmp(buf, "exit") == 0)
+	/*while (ft_strcmp(buf, "exit") == 0)
 	{
 		scanf("%s", buf);
 		if (ft_strcmp("printab", buf) == 1)
@@ -136,20 +136,10 @@ int	main(int argc, char **argv)
 		if (ft_strcmp("pa", buf) == 1)
 		{
 			ft_pa(&pile_a, &pile_b, ps_data);
-			/*if (ft_pa(&pile_a, &pile_b, ps_data) == 1)
-			{
-				lena += 1;
-				lenb -= 1;
-			}*/
 		}
 		if (ft_strcmp("pb", buf) == 1)
 		{
 			ft_pb(&pile_a, &pile_b, ps_data);
-			/*if (ft_pb(&pile_a, &pile_b, ps_data) == 1)
-			{
-				lena -= 1;
-				lenb += 1;
-			}*/
 		}
 		if (ft_strcmp("find", buf) == 1)
 		{
@@ -164,5 +154,8 @@ int	main(int argc, char **argv)
 		{
 			ft_pre_sort(&pile_a, &pile_b ,ps_data);
 		}
-	}
+	}*/
+	ft_pre_sort(&pile_a, &pile_b ,ps_data);
+	//ps_sort_3(&pile_a, ps_data);
+	ps_post_sort_main(&pile_a, &pile_b ,ps_data);
 }

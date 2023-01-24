@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/16 15:12:43 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/19 20:34:10 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,23 @@ void	ft_rrb(t_list **pile);
 void	ft_rrr(t_list **pilea, t_list **pileb);
 void	ft_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 void	ft_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+int 	ps_sorted_check(t_list *pile_a, t_data *ps_data);
 
 
 void	ps_rotate_to_find(t_list **pile, t_data *ps_data);
 t_data	*ps_new_data(size_t lenght);
 void	ps_data_range(t_data *ps_data, size_t range_x, size_t range_y);
 void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	ps_post_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+int		ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot);
+void	ps_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 
+void	ps_post_sort_main(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	ps_sort_3(t_list **pile_a, t_data *ps_data);
+int		ps_find_b(t_data *ps_data, t_list *pile_top, t_list *pile_bot);
+
+
+void	ps_find_data(t_data *ps_data, size_t i, size_t p);
 
 char		**ft_split(char *s, char c);
 int			ft_isdigit(int c);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:31:24 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/16 17:06:18 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/18 14:45:28 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,8 @@ void	ps_rotate_to_find(t_list **pile, t_data *ps_data)
 {
 	size_t	i;
 
-
 	if (ps_find(ps_data, *pile, (*pile)->prev) == 0)
-	{
-		printf("number not found\n");
 		return ;
-	}
 	if (ps_data->pos <= (ps_data->len / 2))
 	{
 		i = 1;

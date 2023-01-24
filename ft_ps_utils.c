@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:31:57 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/16 14:15:31 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/01/19 20:21:20 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,19 @@ t_list	*ft_split_to_list(int *tab, char **array)
 	pslist->next = top;
 	top->prev = pslist;
 	return (top);
+}
+
+int ps_sorted_check(t_list *pile_a, t_data *ps_data)
+{
+	size_t	i;
+
+	i = 1;
+	while (pile_a->index == pile_a->next->index + 1)
+	{
+		pile_a = pile_a->next;
+		i++;
+	}
+	if (i == ps_data->lena)
+		return (1);
+	return (0);
 }
