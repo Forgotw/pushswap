@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:39:20 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/24 16:04:30 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/02/10 14:36:31 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,11 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		else if (ps_where_is_last_sorted(*pile_a, ps_data) == 0)
 		{
 			//printf("test 4\n");
-			ft_rra(pile_a);
+			//ft_rra(pile_a);
+			if ((*pile_b)->index < (*pile_b)->prev->index)
+				ft_rrr(pile_a, pile_b);
+			else
+				ft_rra(pile_a);
 		}
 		if (ps_data->lenb == 1)
 			break ;
@@ -126,7 +130,10 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		ft_pa(pile_a, pile_b, ps_data);
 	while ((*pile_a)->prev->index == (*pile_a)->index - 1)
 	{
-		ft_rra(pile_a);
+		if ((*pile_b)->index < (*pile_b)->prev->index)
+			ft_rrr(pile_a, pile_b);
+		else
+			ft_rra(pile_a);
 		//printf("test 2\n");
 	}
 }
