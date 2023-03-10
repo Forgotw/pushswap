@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/24 15:35:50 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/02/27 13:03:30 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,11 @@ void	ps_post_sort_main(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 void	ps_sort_3(t_list **pile_a, t_data *ps_data);
 int		ps_find_b(t_data *ps_data, t_list *pile_top, t_list *pile_bot);
 
+void	ps_sort_to_index(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	ps_post_sort_main2(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	sort_if_bot_clear(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void	ps_check_for_insert(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 
 void	ps_find_data(t_data *ps_data, size_t i, size_t p);
 

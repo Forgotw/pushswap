@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:39:20 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/02/10 14:36:31 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/02/27 13:38:36 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //	si index bot != len:
 //		si plus petit que top: tant que bot index > index pa: rra puis push
 //		si plus grand que top: tant que bot index < index pa: ra puis push ()
-void sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
+void	sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 {
 	//	si pile_a->prev != ps_data->len:
 	//			tant que pile_a->prev->index > pile_b->index et que pile_a->prev->index < ps_data->len: rra
@@ -26,7 +26,10 @@ void sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	if ((*pile_b)->index < (*pile_a)->index)
 	{
 		while ((*pile_a)->prev->index > (*pile_b)->index && (*pile_a)->prev->index < ps_data->len)
+		{
+			//ps_check_for_insert(pile_a, pile_b, ps_data);
 			ft_rra(pile_a);
+		}
 		ft_pa(pile_a, pile_b, ps_data);
 	}
 	else if ((*pile_b)->index > (*pile_a)->index)
@@ -37,7 +40,7 @@ void sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	}
 }
 
-void sort_if_bot_clear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
+void	sort_if_bot_clear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 {
 	//	si pile_a->prev = ps_data->len:
 	//		si pile_b->index < pile_a->index pa, 
