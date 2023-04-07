@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:19:36 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/02/10 14:01:14 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/06 12:17:53 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ int	ps_find_b(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 	bot_i = ps_data->lenb;
 	while (top_i <= ((ps_data->lenb / 2) +1))
 	{
+		//printf("test10\n");
+		//printf("topi = %i lenb= %i x= %i\n", top_i, ps_data->lenb, ps_data->x);
 		if (pile_top->index >= ps_data->x && pile_top->index <= ps_data->y)
 		{
 			ps_find_data(ps_data, pile_top->index, top_i);
@@ -111,6 +113,7 @@ int	ps_find_b(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 		}
 		pile_top = pile_top->next;
 		pile_bot = pile_bot->prev;
+		//printf("test11\n");
 		top_i++;
 		bot_i--;
 	}

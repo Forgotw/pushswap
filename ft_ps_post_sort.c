@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:39:20 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/02/27 13:38:36 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/06 12:21:43 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ void	sort_if_bot_unclear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 			//ps_check_for_insert(pile_a, pile_b, ps_data);
 			ft_rra(pile_a);
 		}
+		//printf("test1\n");
 		ft_pa(pile_a, pile_b, ps_data);
 	}
 	else if ((*pile_b)->index > (*pile_a)->index)
 	{
 		while ((*pile_b)->index > (*pile_a)->index)
 			ft_ra(pile_a);
+		//printf("test2\n");
 		ft_pa(pile_a, pile_b, ps_data);
 	}
 }
@@ -49,11 +51,15 @@ void	sort_if_bot_clear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	if ((*pile_b)->index == ps_data->index)
 		return ;
 	if ((*pile_b)->index < (*pile_a)->index)
+	{
+		//printf("test3\n");
 		ft_pa(pile_a, pile_b, ps_data);
+	}
 	else if ((*pile_b)->index > (*pile_a)->index)
 	{
 		if ((*pile_b)->index < (*pile_a)->next->index)
 		{
+			//printf("test4\n");
 			ft_pa(pile_a, pile_b, ps_data);
 			ft_sa(pile_a);
 		}
@@ -61,6 +67,7 @@ void	sort_if_bot_clear(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		{
 			while ((*pile_a)->index < (*pile_b)->index)
 				ft_ra(pile_a);
+			//printf("test5\n");
 			ft_pa(pile_a, pile_b, ps_data);
 			}
 	}
@@ -81,6 +88,7 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	//          repeter operation avec to find top - 1
 	while ((*pile_b)->index != ps_data->index && (*pile_b)->prev->index != ps_data->index)
 	{
+		printf("test8\n");
 		if (ps_data->pos > ps_data->lenb / 2)
 			ft_rrb(pile_b);
 		//printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
@@ -100,12 +108,14 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	}
 	while ((*pile_a)->index != ps_data->index + 1 && *pile_b)
 	{
+		printf("test88\n");
 		//printf("test 1\n");
 		if ((*pile_a)->index + 1 == (*pile_b)->next->index)
 		{
 			//printf("test 2\n");
 			ft_sb(pile_b);
 			ft_ra(pile_a);
+			//printf("test6\n");
 			ft_pa(pile_a, pile_b, ps_data);
 		}
 		if (ps_where_is_last_sorted(*pile_a, ps_data) == 1)
@@ -130,15 +140,26 @@ void	ps_post_sort_to_find(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		ft_rrb(pile_b);
 	}
 	if ((*pile_b)->index == (*pile_a)->index - 1)
+	{
+		//printf("test7\n");
 		ft_pa(pile_a, pile_b, ps_data);
+		//printf("test77\n");
+	}
+	//printf("test777\n");
 	while ((*pile_a)->prev->index == (*pile_a)->index - 1)
 	{
-		if ((*pile_b)->index < (*pile_b)->prev->index)
-			ft_rrr(pile_a, pile_b);
+		printf("test888\n");
+		printf("lenb %i\n", (int)ps_data->lenb);
+		if (ps_data->lenb < 1)
+			break;
+		else if ((*pile_b)->index < (*pile_b)->prev->index)
+				ft_rrr(pile_a, pile_b);
 		else
 			ft_rra(pile_a);
 		//printf("test 2\n");
+		//printf("testest77\n");
 	}
+	//printf("test7777\n");
 }
 	// quand on est sur pile_b->index = ps_data->index
 	// tant que pile_a->index != ps_data->index + 1;
@@ -152,25 +173,45 @@ void ps_post_sort_main(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	ps_sort_3(pile_a, ps_data);
 	while (*pile_b != NULL)
 	{
+		if ((*pile_b)->index == (*pile_b)->next->index)
+		{
+			while ((*pile_a)->index + 1 != (*pile_b)->index)
+			{
+				ft_rra(pile_a);
+				ft_pa(pile_a, pile_b, ps_data);
+				printf("seg test\n");
+				ft_printflist(*pile_a, *pile_b, ps_data->lena, ps_data->lenb);
+			}
+		}
 		if ((*pile_b)->index == (*pile_a)->index - 1)
+		{
+			printf("test9\n");
 			ft_pa(pile_a, pile_b, ps_data);
+		}
 		else
 		{
 			ps_data->x = (*pile_a)->index - 1;
 			ps_data->y = ps_data->x;
 			while (ps_find_b(ps_data, *pile_b, (*pile_b)->prev) == 0)
 			{
+				printf("test100000\n");
+				ft_printflist(*pile_a, *pile_b, ps_data->lena, ps_data->lenb);
 				ps_data->x -= 1;
 				ps_data->y = ps_data->x;
 				//printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
 				i++;
 			}
 			//ps_find_b(ps_data, *pile_b, (*pile_b)->prev);
+			printf("test99\n");
 			ps_post_sort_to_find(pile_a, pile_b, ps_data);
 		}
 	}
+	printf("test888888\n");
 	while ((*pile_a)->index != 1)
+	{
+		printf("test8\n");
 		ft_rra(pile_a);
+	}
 }
 	//tant qu'on est pas sur ps_data->index
 	//si ps_data->pos > ps_data->len / 2 rrb
@@ -189,4 +230,7 @@ void ps_post_sort_main(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	//	rrb
 	//	
 	//
+	//
+	////////////////////////////
+	// chercher l'operation qui prend le moins de mouvement a push
 	//

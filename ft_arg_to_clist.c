@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_arg_to_clist.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2022/12/05 17:25:47 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/03/25 17:46:04 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ size_t ft_arraylen(char **array)
     return (i);
 }
 
-t_list    *ft_split_to_list(char **array)
+t_list    *ft_split_to_list(int *tab, char **array)
 {
     size_t  i;
     t_list  *pslist;
@@ -90,40 +90,4 @@ void    ft_printflist(t_list *pslist)
         if (pslist->next == NULL)
             printf("pslist: %i\n", pslist->content);
     }
-}
-void    ft_ps_a(t_list *lst)
-{
-    int top;
-    int bot;
-
-    lst = ft_ps_lstfirst(lst);
-    top = lst->content;
-    printf("top: %i\n", top);
-    lst = ft_ps_lstlast(lst);
-    bot = lst->content;
-    printf("bot: %i\n", bot);
-    lst->content = top;
-    lst = ft_ps_lstfirst(lst);
-    lst->content = bot;
-    printf("Swap Top/Bot\n");
-    //return (lst);
-}
-
-int main(void)
-{
-    char    *array[] = {"123", "5", "54", "67", "3", "23", NULL};
-    int     i;
-    t_list  *pslist;
-
-    i = 0;
-    while (array[i])
-    {
-        printf("%s ", array[i]);
-        i++;
-    }
-    printf("\n%i\n", (int)ft_arraylen(array));
-    pslist = ft_split_to_list(array);
-    ft_printflist(pslist);
-    ft_ps_a(pslist);
-    ft_printflist(pslist);
 }

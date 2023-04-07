@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:53:51 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/02/27 15:00:20 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/07 15:48:54 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,37 +21,24 @@ size_t	ft_arraylen(char **array)
 		i++;
 	return (i);
 }
-/*
-void	ft_rev_printflist(t_list *pslist)
-{
-	pslist = ft_ps_lstlast(pslist);
-	while (pslist->prev != NULL)
-	{
-		printf("pslist: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
-		pslist = pslist->prev;
-		if (pslist->prev == NULL)
-			printf("pslist: %i  index: %i  len: %i\n", pslist->content, (int)pslist->index, (int)pslist->len);
-	}
-}
-*/
-/*
+
 void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 {
 	size_t	i;
-
+	
 	i = 0;
 	while (i < (lena + lenb))
 	{
 		if (pslist && i < lena)
 		{
-			printf("pile a: %i  index: %i  len: %i       ", pslist->content, (int)pslist->index, (int)pslist->len);
+			printf("pile a: %i  index: %i pos: %i target_pos: %i cost_a: %i cost_b: %i         ", pslist->content, (int)pslist->index, (int)pslist->pos, (int)pslist->target_pos, (int)pslist->cost_a, (int)pslist->cost_a);
 			pslist = pslist->next;
 		}
 		if (i >= lena)
 			printf("pile a vide");
 		if (pslist2 && i < lenb)
 		{
-			printf("pile b: %i  index: %i  len: %i       \n", pslist2->content, (int)pslist2->index, (int)pslist2->len);
+			printf("pile b: %i  index: %i pos: %i target_pos: %i cost_a: %i cost_b: %i         \n", pslist2->content, (int)pslist2->index, (int)pslist2->pos, (int)pslist2->target_pos, (int)pslist2->cost_a, (int)pslist2->cost_a);
 			pslist2 = pslist2->next;
 		}
 		if (i >= lenb)
@@ -59,103 +46,50 @@ void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
 		i++;
 	}
 }
-*/
-void	ft_printab(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb)
-{
-	size_t	i;
 
-	i = 0;
-	while (i < lena)
-	{
-		printf("pile a: %i  index: %i \n", pslist->content, (int)pslist->index);
-		pslist = pslist->next;
-		i++;
-	}
-	i = 0;
-	printf("\n\n\n");
-	while (i < lenb)
-	{
-			printf("pile b: %i  index: %i\n", pslist2->content, (int)pslist2->index);
-			pslist2 = pslist2->next;
-			i++;
-	}
+void	pushswap(t_list **pile_a, t_list **pile_b, t_data *ps_data)
+{
+		ft_pre_sort(pile_a, pile_b ,ps_data);
+		ps_sort_3(pile_a, ps_data);
+		while (ps_data->lenb > 95)
+		{
+			get_target_pos(pile_a, pile_b, ps_data);
+			assign_cost(pile_b, ps_data);
+			ft_printflist(*pile_a, *pile_b, ps_data->lena, ps_data->lenb);
+			printf("TEEEEEEEEEEEEEEEEST: pile_bpos: %i cost_b: %i\n", (int)(*pile_b)->pos, (int)(*pile_b)->cost_b);
+			do_best_move(pile_a, pile_b, ps_data);
+		}
 }
 
 int	main(int argc, char **argv)
 {
 	char	**array;
-	//int		i;
 	t_list	*pile_a;
 	t_list	*pile_b;
 	int		*tab;
-	//char	buf[20];
 	t_data	*ps_data;
-	//int	ibuf;
-	//int	ibuf2;
-	size_t	len;
+	t_list *tmp_a;
+	t_list *tmp_b;
 
 	pile_b = NULL;
 	array = ft_ps_arg_split(argc, argv);
 	tab = ft_array_to_tab(array);
 	if (ft_ps_check_error(array, tab, argc) == 0)
 	{
-		printf("Error");
+		free(tab);
+		free_split(array, argc);
+		write(1, "Error\n", 6);
 		return (0);
 	}
-	tab = ft_array_to_tab(array);
 	pile_a = ft_split_to_list(tab, array);
-	len = ft_arraylen(array);
-	ft_ps_index(tab, &pile_a, len);
-	ps_data = ps_new_data(len);
-	//lena = pile_a->len;
-	//lenb = 0;
-	/*while (ft_strcmp(buf, "exit") == 0)
-	{
-		scanf("%s", buf);
-		if (ft_strcmp("printab", buf) == 1)
-		{
-			printf("ps_data i: %i p: %i l: %i la: %i lb: %i x: %i y: %i pile: %c\n", (int)ps_data->index, (int)ps_data->pos, (int)ps_data->len, (int)ps_data->lena, (int)ps_data->lenb, (int)ps_data->x, (int)ps_data->y, ps_data->pile);
-			ft_printab(pile_a, pile_b, ps_data->lena, ps_data->lenb);
-		}
-		if (ft_strcmp("sa", buf) == 1)
-		{
-			ft_sa(&pile_a);
-		}
-		if (ft_strcmp("ra", buf) == 1)
-		{
-			ft_ra(&pile_a);
-		}
-		if (ft_strcmp("rra", buf) == 1)
-		{
-			ft_rra(&pile_a);
-		}
-		if (ft_strcmp("rrr", buf) == 1)
-		{
-			ft_rrr(&pile_a, &pile_b);
-		}
-		if (ft_strcmp("pa", buf) == 1)
-		{
-			ft_pa(&pile_a, &pile_b, ps_data);
-		}
-		if (ft_strcmp("pb", buf) == 1)
-		{
-			ft_pb(&pile_a, &pile_b, ps_data);
-		}
-		if (ft_strcmp("find", buf) == 1)
-		{
-			printf("Enter range of number to find:\n");
-			scanf("%i", &ibuf);
-			scanf("%i", &ibuf2);
-			printf("The range is %i to %i\n", ibuf, ibuf2);
-			ps_data_range(ps_data, (size_t)ibuf, (size_t)ibuf2);
-			ps_rotate_to_find(&pile_a, ps_data);
-		}
-		if (ft_strcmp("sort", buf) == 1)
-		{
-			ft_pre_sort(&pile_a, &pile_b ,ps_data);
-		}
-	}*/
-	ft_pre_sort(&pile_a, &pile_b ,ps_data);
-	//ps_sort_3(&pile_a, ps_data);
-	ps_post_sort_main(&pile_a, &pile_b ,ps_data);
+	ft_ps_index(tab, &pile_a, ft_arraylen(array));
+	ps_data = ps_new_data(ft_arraylen(array));
+	if (ps_sorted_check(pile_a, ps_data) == 0)
+		pushswap(&pile_a, &pile_b, ps_data);
+	/*
+	ps_free(&pile_a, ps_data);
+	free(pile_b);
+	if (argc == 2 && array)
+		free_split(array, argc);
+	free(tab);*/
 }

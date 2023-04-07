@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/02/27 13:03:30 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/07 15:37:41 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,14 @@
 typedef	struct	s_list
 {
 	size_t			index;
+	int			pos;
+	int			cost_a;
+	int			cost_b;
+	int			target_pos;
 	int 			content;
 	//size_t			len;
 	struct s_list	*next;
-    struct s_list   *prev;
+	struct s_list	*prev;
 }				t_list;
 
 typedef	struct s_data
@@ -33,8 +37,12 @@ typedef	struct s_data
 	size_t		len;
 	size_t		lena;
 	size_t		lenb;
+	int			cost_a;
+	int			cost_b;
 	size_t		x;
 	size_t		y;
+	size_t		target_pos;
+	size_t		target_index;
 	char		pile;
 }				t_data;
 
@@ -44,7 +52,6 @@ typedef	struct s_data
 size_t	ft_arraylen(char **array);
 t_list	*ft_split_to_list(int *tab, char **array);
 void    ft_rev_printflist(t_list *pslist);
-void    ft_printflist(t_list *pila, t_list *pileb, size_t lena, size_t lenb);
 void    ft_ps_a(t_list *lst);
 t_list  *ft_ps_lstnew(int content);
 t_list  *ft_ps_lstlast(t_list *lst);
@@ -92,6 +99,9 @@ void	ps_check_for_insert(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 
 void	ps_find_data(t_data *ps_data, size_t i, size_t p);
 
+void ps_free(t_list **pile_a, t_data *ps_data);
+void free_split(char **array, int argc);
+
 char		**ft_split(char *s, char c);
 int			ft_isdigit(int c);
 long int	ft_atoilong(const char *str);
@@ -99,6 +109,19 @@ int			ft_atoi(const char *str);
 int			ft_intlen(int x);
 char		*ft_itoa(int nb);
 int			ft_strcmp(char *str1, char *str2);
+int			ft_abs(int nb);
+
+
+
+void	ft_printflist(t_list *pslist, t_list *pslist2, size_t lena, size_t lenb);
+
+
+void	assign_cost(t_list **pile_b, t_data *data);
+void	get_target_pos(t_list **pile_a, t_list **pile_b, t_data *data);
+void	do_best_move(t_list **pile_a, t_list **pile_b, t_data *data);
+void	do_move(t_list **pile_a, t_list **pile_b, t_data *data);
+
+
 
 
 

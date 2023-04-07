@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:31:57 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/24 15:57:36 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/07 11:53:41 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ t_list	*ft_ps_lstnew(int content)
 	if (!(elt))
 		return (NULL);
 	elt->content = content;
+	elt->cost_a = 0;
+	elt->cost_b = 0;
+	elt->target_pos = 0;
+	elt->pos = 0;
 	elt->next = NULL;
 	elt->prev = NULL;
 	return (elt);
