@@ -6,7 +6,7 @@
 #    By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 11:52:44 by lsohler@stu       #+#    #+#              #
-#    Updated: 2023/04/07 14:39:51 by lsohler          ###   ########.fr        #
+#    Updated: 2023/04/13 17:33:20 by lsohler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ HEADER_SRCS = push_swap.h
 HEADER = $(addprefix $(INCLUDES), $(HEADER_SRCS))
 
 # SOURCES #
-SRCS = ft_ps_check.c ft_ps_data.c ft_ps_free.c ft_ps_index.c ft_ps_main.c ft_ps_post_sort.c ft_ps_pre_sort.c ft_ps_utils.c ft_push.c ft_r_rotate.c ft_rotate.c ft_swap.c post_sort.c post_sort2.c move.c
+SRCS = ft_ps_check.c ft_ps_data.c ft_ps_free.c ft_ps_index.c ps_main.c ft_ps_pre_sort.c ft_ps_utils.c ft_push.c ft_r_rotate.c ft_rotate.c ft_swap.c post_sort.c post_sort2.c move.c
 LIBFT_DIR = libft/
 LIBFT_FUNC = ft_atoi.c ft_isdigit.c ft_itoa.c ft_split.c ft_strcmp.c ft_abs.c
 LIBFT_SRCS = $(addprefix $(LIBFT_DIR), $(LIBFT_FUNC))
@@ -28,7 +28,7 @@ LIBFT_OBJS = $(LIBFT_SRCS:.c=.o)
 
 # UTILS #
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -g3
 RM = rm -rf
 
 # COLORS #
