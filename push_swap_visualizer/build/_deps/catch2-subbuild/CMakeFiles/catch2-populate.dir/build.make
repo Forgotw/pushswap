@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild
+CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild
+CMAKE_BINARY_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild
 
 # Utility rule file for catch2-populate.
 
@@ -77,57 +77,57 @@ CMakeFiles/catch2-populate-complete: catch2-populate-prefix/src/catch2-populate-
 CMakeFiles/catch2-populate-complete: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build
 CMakeFiles/catch2-populate-complete: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install
 CMakeFiles/catch2-populate-complete: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'catch2-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E make_directory /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'catch2-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E make_directory /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update:
 .PHONY : catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure: catch2-populate-prefix/tmp/catch2-populate-cfgcmd.txt
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-gitinfo.txt
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitclone.cmake
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitclone.cmake
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'catch2-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -Dcfgdir= -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-mkdirs.cmake
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'catch2-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -Dcfgdir= -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-mkdirs.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'catch2-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'catch2-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update:
 .PHONY : catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test
 
 catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update: catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'catch2-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-src && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'catch2-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-src && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitupdate.cmake
 
 catch2-populate: CMakeFiles/catch2-populate
 catch2-populate: CMakeFiles/catch2-populate-complete
@@ -151,6 +151,6 @@ CMakeFiles/catch2-populate.dir/clean:
 .PHONY : CMakeFiles/catch2-populate.dir/clean
 
 CMakeFiles/catch2-populate.dir/depend:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/catch2-populate.dir/depend
 

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
+CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
+CMAKE_BINARY_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild
 
 # Utility rule file for imgui-sfml-populate.
 
@@ -77,57 +77,57 @@ CMakeFiles/imgui-sfml-populate-complete: imgui-sfml-populate-prefix/src/imgui-sf
 CMakeFiles/imgui-sfml-populate-complete: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-build
 CMakeFiles/imgui-sfml-populate-complete: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-install
 CMakeFiles/imgui-sfml-populate-complete: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'imgui-sfml-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E make_directory /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles/imgui-sfml-populate-complete
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'imgui-sfml-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E make_directory /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles/imgui-sfml-populate-complete
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-done
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update:
 .PHONY : imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-build: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-build
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-configure: imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-cfgcmd.txt
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-configure: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-configure
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-download: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-gitinfo.txt
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-download: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-gitclone.cmake
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-gitclone.cmake
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-download
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-install: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-install
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'imgui-sfml-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -Dcfgdir= -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-mkdirs.cmake
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'imgui-sfml-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -Dcfgdir= -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-mkdirs.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-mkdir
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-patch: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'imgui-sfml-populate'"
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-patch
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'imgui-sfml-populate'"
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-patch
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update:
 .PHONY : imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-test: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E echo_append
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E touch /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E echo_append
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E touch /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-test
 
 imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-update: imgui-sfml-populate-prefix/src/imgui-sfml-populate-stamp/imgui-sfml-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'imgui-sfml-populate'"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-src && /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'imgui-sfml-populate'"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/imgui-sfml-populate-prefix/tmp/imgui-sfml-populate-gitupdate.cmake
 
 imgui-sfml-populate: CMakeFiles/imgui-sfml-populate
 imgui-sfml-populate: CMakeFiles/imgui-sfml-populate-complete
@@ -151,6 +151,6 @@ CMakeFiles/imgui-sfml-populate.dir/clean:
 .PHONY : CMakeFiles/imgui-sfml-populate.dir/clean
 
 CMakeFiles/imgui-sfml-populate.dir/depend:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles/imgui-sfml-populate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-subbuild/CMakeFiles/imgui-sfml-populate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/imgui-sfml-populate.dir/depend
 

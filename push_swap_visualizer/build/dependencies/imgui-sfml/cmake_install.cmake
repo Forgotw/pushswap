@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lsohler/pushswap/push_swap_visualizer/dependencies/imgui-sfml
+# Install script for directory: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/dependencies/imgui-sfml
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/cmake_install.cmake")
+  include("/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/cmake_install.cmake")
 endif()
 

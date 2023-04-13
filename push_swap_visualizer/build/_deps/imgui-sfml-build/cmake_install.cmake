@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-src
+# Install script for directory: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,29 +34,37 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/libImGui-SFML.a")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.a" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.a")
-    execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/libImGui-SFML.dylib")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.dylib" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.dylib")
+    execute_process(COMMAND /usr/bin/install_name_tool
+      -delete_rpath "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-build/lib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.dylib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" -x "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libImGui-SFML.dylib")
+    endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imconfig.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imgui.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imgui_internal.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imstb_rectpack.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imstb_textedit.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/imstb_truetype.h"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imconfig.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imgui_internal.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_rectpack.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_textedit.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/imstb_truetype.h"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
     )
 endif()
 
@@ -64,7 +72,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake"
-         "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
+         "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-*.cmake")
       if(_cmake_old_config_files)
@@ -77,9 +85,9 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig-noconfig.cmake")
   endif()
 endif()
 

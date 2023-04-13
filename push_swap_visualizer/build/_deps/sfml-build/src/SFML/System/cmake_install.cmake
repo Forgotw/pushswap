@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-src/src/SFML/System
+# Install script for directory: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-src/src/SFML/System
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.2.5.1.dylib"
-    "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.2.5.dylib"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.2.5.1.dylib"
+    "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.2.5.dylib"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.2.5.1.dylib"
@@ -49,18 +49,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "${file}")
+        execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" -x "${file}")
       endif()
     endif()
   endforeach()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.dylib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-build/lib/libsfml-system.dylib")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.dylib" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.dylib")
+      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" -x "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.dylib")
     endif()
   endif()
 endif()

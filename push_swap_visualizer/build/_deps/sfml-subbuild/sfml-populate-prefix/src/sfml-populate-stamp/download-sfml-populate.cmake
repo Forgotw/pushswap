@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(STATUS "verifying file...
-       file='/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'")
+       file='/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'")
 
-  file("" "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" actual_value)
+  file("" "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(STATUS " hash of
-    /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip
+    /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip
   does not match expected value
     expected: ''
       actual: '${actual_value}'")
@@ -71,7 +71,7 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" STREQUAL "")
+if("/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip" STREQUAL "")
   message(FATAL_ERROR "LOCAL can't be empty")
 endif()
 
@@ -79,32 +79,32 @@ if("https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-sources.zip"
   message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-if(EXISTS "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+if(EXISTS "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(STATUS "File already exists and hash match (skip download):
-  file='/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+  file='/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
   =''"
       )
       return()
     else()
       message(STATUS "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+      file(REMOVE "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
     endif()
   else()
     message(STATUS "File already exists but no hash specified (use URL_HASH):
-  file='/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+  file='/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+    file(REMOVE "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(STATUS "Downloading...
-   dst='/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
+   dst='/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip'
    timeout='none'
    inactivity timeout='none'"
 )
@@ -126,7 +126,7 @@ foreach(i RANGE ${retry_number})
 
       file(
         DOWNLOAD
-        "${url}" "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip"
+        "${url}" "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip"
         SHOW_PROGRESS
         # no TIMEOUT
         # no INACTIVITY_TIMEOUT
@@ -143,7 +143,7 @@ foreach(i RANGE ${retry_number})
         check_file_hash(has_hash hash_is_good)
         if(has_hash AND NOT hash_is_good)
           message(STATUS "Hash mismatch, removing...")
-          file(REMOVE "/Users/lsohler/pushswap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
+          file(REMOVE "/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/sfml-subbuild/sfml-populate-prefix/src/SFML-2.5.1-sources.zip")
         else()
           message(STATUS "Downloading... done")
           return()

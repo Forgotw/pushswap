@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer
+CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
+CMAKE_BINARY_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/VisualizerLib.dir/depend.make
@@ -70,60 +70,60 @@ include src/CMakeFiles/VisualizerLib.dir/progress.make
 include src/CMakeFiles/VisualizerLib.dir/flags.make
 
 src/CMakeFiles/VisualizerLib.dir/utils.cpp.o: src/CMakeFiles/VisualizerLib.dir/flags.make
-src/CMakeFiles/VisualizerLib.dir/utils.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/src/utils.cpp
+src/CMakeFiles/VisualizerLib.dir/utils.cpp.o: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/utils.cpp
 src/CMakeFiles/VisualizerLib.dir/utils.cpp.o: src/CMakeFiles/VisualizerLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/VisualizerLib.dir/utils.cpp.o"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/utils.cpp.o -MF CMakeFiles/VisualizerLib.dir/utils.cpp.o.d -o CMakeFiles/VisualizerLib.dir/utils.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/src/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/VisualizerLib.dir/utils.cpp.o"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/utils.cpp.o -MF CMakeFiles/VisualizerLib.dir/utils.cpp.o.d -o CMakeFiles/VisualizerLib.dir/utils.cpp.o -c /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/utils.cpp
 
 src/CMakeFiles/VisualizerLib.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VisualizerLib.dir/utils.cpp.i"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/src/utils.cpp > CMakeFiles/VisualizerLib.dir/utils.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/utils.cpp > CMakeFiles/VisualizerLib.dir/utils.cpp.i
 
 src/CMakeFiles/VisualizerLib.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VisualizerLib.dir/utils.cpp.s"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/src/utils.cpp -o CMakeFiles/VisualizerLib.dir/utils.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/utils.cpp -o CMakeFiles/VisualizerLib.dir/utils.cpp.s
 
 src/CMakeFiles/VisualizerLib.dir/queues.cpp.o: src/CMakeFiles/VisualizerLib.dir/flags.make
-src/CMakeFiles/VisualizerLib.dir/queues.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/src/queues.cpp
+src/CMakeFiles/VisualizerLib.dir/queues.cpp.o: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/queues.cpp
 src/CMakeFiles/VisualizerLib.dir/queues.cpp.o: src/CMakeFiles/VisualizerLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/VisualizerLib.dir/queues.cpp.o"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/queues.cpp.o -MF CMakeFiles/VisualizerLib.dir/queues.cpp.o.d -o CMakeFiles/VisualizerLib.dir/queues.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/src/queues.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/VisualizerLib.dir/queues.cpp.o"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/queues.cpp.o -MF CMakeFiles/VisualizerLib.dir/queues.cpp.o.d -o CMakeFiles/VisualizerLib.dir/queues.cpp.o -c /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/queues.cpp
 
 src/CMakeFiles/VisualizerLib.dir/queues.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VisualizerLib.dir/queues.cpp.i"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/src/queues.cpp > CMakeFiles/VisualizerLib.dir/queues.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/queues.cpp > CMakeFiles/VisualizerLib.dir/queues.cpp.i
 
 src/CMakeFiles/VisualizerLib.dir/queues.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VisualizerLib.dir/queues.cpp.s"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/src/queues.cpp -o CMakeFiles/VisualizerLib.dir/queues.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/queues.cpp -o CMakeFiles/VisualizerLib.dir/queues.cpp.s
 
 src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o: src/CMakeFiles/VisualizerLib.dir/flags.make
-src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/src/pushswap.cpp
+src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/pushswap.cpp
 src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o: src/CMakeFiles/VisualizerLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o -MF CMakeFiles/VisualizerLib.dir/pushswap.cpp.o.d -o CMakeFiles/VisualizerLib.dir/pushswap.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/src/pushswap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o -MF CMakeFiles/VisualizerLib.dir/pushswap.cpp.o.d -o CMakeFiles/VisualizerLib.dir/pushswap.cpp.o -c /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/pushswap.cpp
 
 src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VisualizerLib.dir/pushswap.cpp.i"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/src/pushswap.cpp > CMakeFiles/VisualizerLib.dir/pushswap.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/pushswap.cpp > CMakeFiles/VisualizerLib.dir/pushswap.cpp.i
 
 src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VisualizerLib.dir/pushswap.cpp.s"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/src/pushswap.cpp -o CMakeFiles/VisualizerLib.dir/pushswap.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/pushswap.cpp -o CMakeFiles/VisualizerLib.dir/pushswap.cpp.s
 
 src/CMakeFiles/VisualizerLib.dir/gui.cpp.o: src/CMakeFiles/VisualizerLib.dir/flags.make
-src/CMakeFiles/VisualizerLib.dir/gui.cpp.o: /Users/lsohler/pushswap/push_swap_visualizer/src/gui.cpp
+src/CMakeFiles/VisualizerLib.dir/gui.cpp.o: /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/gui.cpp
 src/CMakeFiles/VisualizerLib.dir/gui.cpp.o: src/CMakeFiles/VisualizerLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/VisualizerLib.dir/gui.cpp.o"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/gui.cpp.o -MF CMakeFiles/VisualizerLib.dir/gui.cpp.o.d -o CMakeFiles/VisualizerLib.dir/gui.cpp.o -c /Users/lsohler/pushswap/push_swap_visualizer/src/gui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/VisualizerLib.dir/gui.cpp.o"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/VisualizerLib.dir/gui.cpp.o -MF CMakeFiles/VisualizerLib.dir/gui.cpp.o.d -o CMakeFiles/VisualizerLib.dir/gui.cpp.o -c /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/gui.cpp
 
 src/CMakeFiles/VisualizerLib.dir/gui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VisualizerLib.dir/gui.cpp.i"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lsohler/pushswap/push_swap_visualizer/src/gui.cpp > CMakeFiles/VisualizerLib.dir/gui.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/gui.cpp > CMakeFiles/VisualizerLib.dir/gui.cpp.i
 
 src/CMakeFiles/VisualizerLib.dir/gui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VisualizerLib.dir/gui.cpp.s"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lsohler/pushswap/push_swap_visualizer/src/gui.cpp -o CMakeFiles/VisualizerLib.dir/gui.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src/gui.cpp -o CMakeFiles/VisualizerLib.dir/gui.cpp.s
 
 # Object files for target VisualizerLib
 VisualizerLib_OBJECTS = \
@@ -141,19 +141,19 @@ src/libVisualizerLib.a: src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o
 src/libVisualizerLib.a: src/CMakeFiles/VisualizerLib.dir/gui.cpp.o
 src/libVisualizerLib.a: src/CMakeFiles/VisualizerLib.dir/build.make
 src/libVisualizerLib.a: src/CMakeFiles/VisualizerLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libVisualizerLib.a"
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/VisualizerLib.dir/cmake_clean_target.cmake
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VisualizerLib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libVisualizerLib.a"
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/VisualizerLib.dir/cmake_clean_target.cmake
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VisualizerLib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/VisualizerLib.dir/build: src/libVisualizerLib.a
 .PHONY : src/CMakeFiles/VisualizerLib.dir/build
 
 src/CMakeFiles/VisualizerLib.dir/clean:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/VisualizerLib.dir/cmake_clean.cmake
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/VisualizerLib.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/VisualizerLib.dir/clean
 
 src/CMakeFiles/VisualizerLib.dir/depend:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lsohler/pushswap/push_swap_visualizer /Users/lsohler/pushswap/push_swap_visualizer/src /Users/lsohler/pushswap/push_swap_visualizer/build /Users/lsohler/pushswap/push_swap_visualizer/build/src /Users/lsohler/pushswap/push_swap_visualizer/build/src/CMakeFiles/VisualizerLib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosohler/projectc2/push_swap/push_swap_visualizer /Users/leosohler/projectc2/push_swap/push_swap_visualizer/src /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src/CMakeFiles/VisualizerLib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/VisualizerLib.dir/depend
 

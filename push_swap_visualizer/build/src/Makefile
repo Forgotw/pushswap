@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer
+CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
+CMAKE_BINARY_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles /Users/lsohler/pushswap/push_swap_visualizer/build/src//CMakeFiles/progress.marks
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles 0
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/src//CMakeFiles/progress.marks
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/VisualizerLib.dir/rule:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/VisualizerLib.dir/rule
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/VisualizerLib.dir/rule
 .PHONY : src/CMakeFiles/VisualizerLib.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ VisualizerLib: src/CMakeFiles/VisualizerLib.dir/rule
 
 # fast build rule for target.
 VisualizerLib/fast:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/build
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/build
 .PHONY : VisualizerLib/fast
 
 # Convenience name for target.
 src/CMakeFiles/visualizer.dir/rule:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/visualizer.dir/rule
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/visualizer.dir/rule
 .PHONY : src/CMakeFiles/visualizer.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ visualizer: src/CMakeFiles/visualizer.dir/rule
 
 # fast build rule for target.
 visualizer/fast:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/build
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/build
 .PHONY : visualizer/fast
 
 gui.o: gui.cpp.o
@@ -194,7 +194,7 @@ gui.o: gui.cpp.o
 
 # target to build an object file
 gui.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.o
 .PHONY : gui.cpp.o
 
 gui.i: gui.cpp.i
@@ -202,7 +202,7 @@ gui.i: gui.cpp.i
 
 # target to preprocess a source file
 gui.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.i
 .PHONY : gui.cpp.i
 
 gui.s: gui.cpp.s
@@ -210,7 +210,7 @@ gui.s: gui.cpp.s
 
 # target to generate assembly for a file
 gui.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/gui.cpp.s
 .PHONY : gui.cpp.s
 
 main.o: main.cpp.o
@@ -218,7 +218,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -226,7 +226,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -234,7 +234,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/visualizer.dir/build.make src/CMakeFiles/visualizer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 pushswap.o: pushswap.cpp.o
@@ -242,7 +242,7 @@ pushswap.o: pushswap.cpp.o
 
 # target to build an object file
 pushswap.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.o
 .PHONY : pushswap.cpp.o
 
 pushswap.i: pushswap.cpp.i
@@ -250,7 +250,7 @@ pushswap.i: pushswap.cpp.i
 
 # target to preprocess a source file
 pushswap.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.i
 .PHONY : pushswap.cpp.i
 
 pushswap.s: pushswap.cpp.s
@@ -258,7 +258,7 @@ pushswap.s: pushswap.cpp.s
 
 # target to generate assembly for a file
 pushswap.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/pushswap.cpp.s
 .PHONY : pushswap.cpp.s
 
 queues.o: queues.cpp.o
@@ -266,7 +266,7 @@ queues.o: queues.cpp.o
 
 # target to build an object file
 queues.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.o
 .PHONY : queues.cpp.o
 
 queues.i: queues.cpp.i
@@ -274,7 +274,7 @@ queues.i: queues.cpp.i
 
 # target to preprocess a source file
 queues.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.i
 .PHONY : queues.cpp.i
 
 queues.s: queues.cpp.s
@@ -282,7 +282,7 @@ queues.s: queues.cpp.s
 
 # target to generate assembly for a file
 queues.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/queues.cpp.s
 .PHONY : queues.cpp.s
 
 utils.o: utils.cpp.o
@@ -290,7 +290,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
 utils.i: utils.cpp.i
@@ -298,7 +298,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
 utils.s: utils.cpp.s
@@ -306,7 +306,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/VisualizerLib.dir/build.make src/CMakeFiles/VisualizerLib.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
 # Help Target
@@ -349,6 +349,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

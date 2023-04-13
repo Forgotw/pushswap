@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/04/07 15:37:41 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/10 16:44:50 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <limits.h>
 
 typedef	struct	s_list
 {
@@ -120,6 +121,9 @@ void	assign_cost(t_list **pile_b, t_data *data);
 void	get_target_pos(t_list **pile_a, t_list **pile_b, t_data *data);
 void	do_best_move(t_list **pile_a, t_list **pile_b, t_data *data);
 void	do_move(t_list **pile_a, t_list **pile_b, t_data *data);
+void	rotate_to_first(t_list **pile_a, t_data *data);
+void	assign_pos(t_list **list, size_t len);
+
 
 
 

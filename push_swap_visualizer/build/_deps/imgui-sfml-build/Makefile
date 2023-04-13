@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lsohler/pushswap/push_swap_visualizer
+CMAKE_SOURCE_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
+CMAKE_BINARY_DIR = /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/lsohler/pushswap/push_swap_visualizer/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/goinfre/lsohler/.brew/Cellar/cmake/3.25.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles /Users/lsohler/pushswap/push_swap_visualizer/build/_deps/imgui-sfml-build//CMakeFiles/progress.marks
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lsohler/pushswap/push_swap_visualizer/build/CMakeFiles 0
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/_deps/imgui-sfml-build//CMakeFiles/progress.marks
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/clean
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/preinstall
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/preinstall
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/rule:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/rule
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/rule
 .PHONY : _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ ImGui-SFML: _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/rule
 
 # fast build rule for target.
 ImGui-SFML/fast:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build
 .PHONY : ImGui-SFML/fast
 
 __/imgui-src/imgui.o: __/imgui-src/imgui.cpp.o
@@ -180,7 +180,7 @@ __/imgui-src/imgui.o: __/imgui-src/imgui.cpp.o
 
 # target to build an object file
 __/imgui-src/imgui.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.o
 .PHONY : __/imgui-src/imgui.cpp.o
 
 __/imgui-src/imgui.i: __/imgui-src/imgui.cpp.i
@@ -188,7 +188,7 @@ __/imgui-src/imgui.i: __/imgui-src/imgui.cpp.i
 
 # target to preprocess a source file
 __/imgui-src/imgui.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.i
 .PHONY : __/imgui-src/imgui.cpp.i
 
 __/imgui-src/imgui.s: __/imgui-src/imgui.cpp.s
@@ -196,7 +196,7 @@ __/imgui-src/imgui.s: __/imgui-src/imgui.cpp.s
 
 # target to generate assembly for a file
 __/imgui-src/imgui.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui.cpp.s
 .PHONY : __/imgui-src/imgui.cpp.s
 
 __/imgui-src/imgui_draw.o: __/imgui-src/imgui_draw.cpp.o
@@ -204,7 +204,7 @@ __/imgui-src/imgui_draw.o: __/imgui-src/imgui_draw.cpp.o
 
 # target to build an object file
 __/imgui-src/imgui_draw.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.o
 .PHONY : __/imgui-src/imgui_draw.cpp.o
 
 __/imgui-src/imgui_draw.i: __/imgui-src/imgui_draw.cpp.i
@@ -212,7 +212,7 @@ __/imgui-src/imgui_draw.i: __/imgui-src/imgui_draw.cpp.i
 
 # target to preprocess a source file
 __/imgui-src/imgui_draw.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.i
 .PHONY : __/imgui-src/imgui_draw.cpp.i
 
 __/imgui-src/imgui_draw.s: __/imgui-src/imgui_draw.cpp.s
@@ -220,7 +220,7 @@ __/imgui-src/imgui_draw.s: __/imgui-src/imgui_draw.cpp.s
 
 # target to generate assembly for a file
 __/imgui-src/imgui_draw.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_draw.cpp.s
 .PHONY : __/imgui-src/imgui_draw.cpp.s
 
 __/imgui-src/imgui_tables.o: __/imgui-src/imgui_tables.cpp.o
@@ -228,7 +228,7 @@ __/imgui-src/imgui_tables.o: __/imgui-src/imgui_tables.cpp.o
 
 # target to build an object file
 __/imgui-src/imgui_tables.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.o
 .PHONY : __/imgui-src/imgui_tables.cpp.o
 
 __/imgui-src/imgui_tables.i: __/imgui-src/imgui_tables.cpp.i
@@ -236,7 +236,7 @@ __/imgui-src/imgui_tables.i: __/imgui-src/imgui_tables.cpp.i
 
 # target to preprocess a source file
 __/imgui-src/imgui_tables.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.i
 .PHONY : __/imgui-src/imgui_tables.cpp.i
 
 __/imgui-src/imgui_tables.s: __/imgui-src/imgui_tables.cpp.s
@@ -244,7 +244,7 @@ __/imgui-src/imgui_tables.s: __/imgui-src/imgui_tables.cpp.s
 
 # target to generate assembly for a file
 __/imgui-src/imgui_tables.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_tables.cpp.s
 .PHONY : __/imgui-src/imgui_tables.cpp.s
 
 __/imgui-src/imgui_widgets.o: __/imgui-src/imgui_widgets.cpp.o
@@ -252,7 +252,7 @@ __/imgui-src/imgui_widgets.o: __/imgui-src/imgui_widgets.cpp.o
 
 # target to build an object file
 __/imgui-src/imgui_widgets.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.o
 .PHONY : __/imgui-src/imgui_widgets.cpp.o
 
 __/imgui-src/imgui_widgets.i: __/imgui-src/imgui_widgets.cpp.i
@@ -260,7 +260,7 @@ __/imgui-src/imgui_widgets.i: __/imgui-src/imgui_widgets.cpp.i
 
 # target to preprocess a source file
 __/imgui-src/imgui_widgets.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.i
 .PHONY : __/imgui-src/imgui_widgets.cpp.i
 
 __/imgui-src/imgui_widgets.s: __/imgui-src/imgui_widgets.cpp.s
@@ -268,7 +268,7 @@ __/imgui-src/imgui_widgets.s: __/imgui-src/imgui_widgets.cpp.s
 
 # target to generate assembly for a file
 __/imgui-src/imgui_widgets.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/imgui_widgets.cpp.s
 .PHONY : __/imgui-src/imgui_widgets.cpp.s
 
 __/imgui-src/misc/cpp/imgui_stdlib.o: __/imgui-src/misc/cpp/imgui_stdlib.cpp.o
@@ -276,7 +276,7 @@ __/imgui-src/misc/cpp/imgui_stdlib.o: __/imgui-src/misc/cpp/imgui_stdlib.cpp.o
 
 # target to build an object file
 __/imgui-src/misc/cpp/imgui_stdlib.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.o
 .PHONY : __/imgui-src/misc/cpp/imgui_stdlib.cpp.o
 
 __/imgui-src/misc/cpp/imgui_stdlib.i: __/imgui-src/misc/cpp/imgui_stdlib.cpp.i
@@ -284,7 +284,7 @@ __/imgui-src/misc/cpp/imgui_stdlib.i: __/imgui-src/misc/cpp/imgui_stdlib.cpp.i
 
 # target to preprocess a source file
 __/imgui-src/misc/cpp/imgui_stdlib.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.i
 .PHONY : __/imgui-src/misc/cpp/imgui_stdlib.cpp.i
 
 __/imgui-src/misc/cpp/imgui_stdlib.s: __/imgui-src/misc/cpp/imgui_stdlib.cpp.s
@@ -292,7 +292,7 @@ __/imgui-src/misc/cpp/imgui_stdlib.s: __/imgui-src/misc/cpp/imgui_stdlib.cpp.s
 
 # target to generate assembly for a file
 __/imgui-src/misc/cpp/imgui_stdlib.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.s
 .PHONY : __/imgui-src/misc/cpp/imgui_stdlib.cpp.s
 
 imgui-SFML.o: imgui-SFML.cpp.o
@@ -300,7 +300,7 @@ imgui-SFML.o: imgui-SFML.cpp.o
 
 # target to build an object file
 imgui-SFML.cpp.o:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.o
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.o
 .PHONY : imgui-SFML.cpp.o
 
 imgui-SFML.i: imgui-SFML.cpp.i
@@ -308,7 +308,7 @@ imgui-SFML.i: imgui-SFML.cpp.i
 
 # target to preprocess a source file
 imgui-SFML.cpp.i:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.i
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.i
 .PHONY : imgui-SFML.cpp.i
 
 imgui-SFML.s: imgui-SFML.cpp.s
@@ -316,7 +316,7 @@ imgui-SFML.s: imgui-SFML.cpp.s
 
 # target to generate assembly for a file
 imgui-SFML.cpp.s:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.s
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.s
 .PHONY : imgui-SFML.cpp.s
 
 # Help Target
@@ -361,6 +361,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/lsohler/pushswap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/leosohler/projectc2/push_swap/push_swap_visualizer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

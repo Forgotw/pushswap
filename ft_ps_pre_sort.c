@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_pre_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:19:36 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/04/06 12:17:53 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/10 16:29:29 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	//range_x = 1;
 	//range_y = (ps_data->len / 3);
 	ps_data->x = 1;
-	ps_data->y = (ps_data->len / 5);
+	ps_data->y = (ps_data->len / 3);
 	i = 1;
 	while (ps_data->lena > 3)
 	{
@@ -50,7 +50,7 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		if (i == ps_data->y)
 		{
 			ps_data->x = i + 1;
-			ps_data->y = i + (ps_data->lena / 4);
+			ps_data->y = i + (ps_data->lena / 3);
 			//printf("           ps_data->x: %i ps_data->y: %i\n", (int)ps_data->x, (int)ps_data->y);
 			if ((ps_data->y - ps_data->x) < 3)
 			{

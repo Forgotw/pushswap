@@ -1,46 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ps_free.c                                       :+:      :+:    :+:   */
+/*   args_split.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 15:49:07 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/10 18:17:05 by lsohler@stu      ###   ########.fr       */
+/*   Created: 2022/12/07 11:22:16 by lsohler@stu       #+#    #+#             */
+/*   Updated: 2022/12/07 12:33:31 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ps_free(t_list **pile_a, t_data *ps_data)
+int     ft_ps_argcheck()
+char    **ft_ps_argsplit(int ac, char **av)
 {
-	t_list	*tmp;
-	size_t	i;
+    char **array;
 
-	if (!pile_a || !*pile_a)
-		return ;
-	i = 0;
-	while (i++ < ps_data->lena)
-	{
-		tmp = (*pile_a)->next;
-		free(*pile_a);
-		*pile_a = tmp;
-	}
-	*pile_a = NULL;
-}
-
-void free_split(char **array, int argc)
-{
-	size_t	i;
-
-	i = 0;
-	if (argc > 2)
-		return ;
-	while (array[i])
-	{
-		free(array[i]);
-		i++;
-	}
-	if (array)
-		free(array);
+    if (ac == 2)
+        array = ft_split(av[1])
 }

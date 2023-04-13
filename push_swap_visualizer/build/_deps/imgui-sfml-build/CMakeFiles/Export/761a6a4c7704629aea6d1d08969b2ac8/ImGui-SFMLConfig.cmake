@@ -56,12 +56,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target ImGui-SFML::ImGui-SFML
-add_library(ImGui-SFML::ImGui-SFML STATIC IMPORTED)
+add_library(ImGui-SFML::ImGui-SFML SHARED IMPORTED)
 
 set_target_properties(ImGui-SFML::ImGui-SFML PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "IMGUI_USER_CONFIG=\"imconfig-SFML.h\""
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "sfml-graphics;sfml-system;sfml-window;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/OpenGL.framework;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/OpenGL.framework"
+  INTERFACE_LINK_LIBRARIES "sfml-graphics;sfml-system;sfml-window;/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework;/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

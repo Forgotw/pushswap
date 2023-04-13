@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:36:19 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/07 15:39:15 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/10 15:38:06 by lsohler@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ void	rotate_b(t_list **pile_b, int *cost_b)
 	{
 		if (*cost_b > 0)
 		{
-			ft_ra(pile_b);
+			ft_rb(pile_b);
 			(*cost_b)--;
 		}
 		else if (*cost_b < 0)
 		{
-			ft_rra(pile_b);
+			ft_rrb(pile_b);
 			(*cost_b)++;
 		}
 	}
@@ -73,7 +73,7 @@ void	do_move(t_list **pile_a, t_list **pile_b, t_data *data)
 
 	cost_a = data->cost_a;
 	cost_b = data->cost_b;
-	printf("cost_a= %i cost_b= %i\n", cost_a, cost_b);
+	//printf("cost_a= %i cost_b= %i\n", cost_a, cost_b);
 	if (cost_a < 0 && cost_b < 0)
 		do_rrr(pile_a, pile_b, &cost_a, &cost_b);
 	else if (cost_a > 0 && cost_b > 0)
