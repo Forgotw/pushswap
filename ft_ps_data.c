@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:31:24 by lsohler           #+#    #+#             */
-/*   Updated: 2023/01/18 14:45:28 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 14:34:16 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,11 @@ int	ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 
 	top_i = 1;
 	bot_i = ps_data->len;
+	//printf("%p\n", pile_top);
+	//printf("Bizarre %p\n", pile_top->prev);
 	while (top_i <= ((ps_data->len / 2) +1))
 	{
+		//printf("Before\n");
 		if (pile_top->index >= ps_data->x && pile_top->index <= ps_data->y)
 		{
 			ps_find_data(ps_data, pile_top->index, top_i);
@@ -61,6 +64,7 @@ int	ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 			ps_find_data(ps_data, pile_bot->index, bot_i);
 			return (1);
 		}
+		//printf("Before\n");
 		pile_top = pile_top->next;
 		pile_bot = pile_bot->prev;
 		top_i++;

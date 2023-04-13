@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/04/10 16:44:50 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 14:31:50 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+
+//# define	INT_MIN	-2147483648
+//# define	INT_MAX	2147483647
 
 typedef	struct	s_list
 {
@@ -61,7 +64,7 @@ void    ft_assign_top_bot(t_list *pslist);
 char    **ft_ps_arg_split(int argc, char **argv);
 int 	ft_ps_check_digit(char **array);
 int 	*ft_array_to_tab(char **array);
-int 	ft_ps_check_int(char **array, int *tab);
+//int 	ft_ps_check_int(char **array, int *tab);
 int 	ft_ps_check_double(int *tab, int arraylen);
 int		ft_ps_check_error(char **array, int *tab, int argc);
 void    ft_ps_index(int *tab, t_list **ps_list, size_t len);

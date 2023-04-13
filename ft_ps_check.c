@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:37:48 by lsohler           #+#    #+#             */
-/*   Updated: 2023/03/25 18:29:43 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/13 14:32:38 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,36 @@ int	*ft_array_to_tab(char **array)
 	return (tab);
 }
 
-int	ft_ps_check_int(char **array, int *tab)
+/*int	ft_ps_check_int(char **array, int *tab)
 {
 	int	i;
+	char *papapa;
 
 	i = 0;
 	while (array[i])
 	{
-		if (ft_strcmp(array[i], ft_itoa(tab[i])) == 0)
+		papapa = ft_itoa(tab[i]);
+		if (ft_strcmp(array[i], papapa) == 0)
+		{
+			free(papapa);
+			return (0);
+		}
+		i++;
+		free(papapa);
+	}
+	return (1);
+}*/
+
+int	ft_ps_check_int(char **array)
+{
+	long	x;
+	int		i;
+
+	i = 0;
+	while (array[i])
+	{
+		x = ft_atoilong(array[i]);
+		if (x > INT_MAX || x < INT_MIN)
 			return (0);
 		i++;
 	}
@@ -101,7 +123,7 @@ int	ft_ps_check_error(char **array, int *tab, int argc)
 		i++;
 	if (ft_ps_check_digit(array) == 0
 		|| ft_ps_check_double(tab, i) == 0
-		|| ft_ps_check_int(array, tab) == 0
+		|| ft_ps_check_int(array) == 0
 		|| argc < 2)
 	{
 		return (0);
