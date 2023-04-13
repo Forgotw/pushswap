@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:36:19 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/10 15:38:06 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 15:25:54 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	do_move(t_list **pile_a, t_list **pile_b, t_data *data)
 
 	cost_a = data->cost_a;
 	cost_b = data->cost_b;
-	//printf("cost_a= %i cost_b= %i\n", cost_a, cost_b);
 	if (cost_a < 0 && cost_b < 0)
 		do_rrr(pile_a, pile_b, &cost_a, &cost_b);
 	else if (cost_a > 0 && cost_b > 0)

@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:38:22 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/10 13:29:14 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/13 15:24:17 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static void	ft_r_rotate(t_list **pslist)
 		return ;
 	*pslist = (*pslist)->prev;
 }
+
 void	ft_rra(t_list **pile)
 {
 	ft_r_rotate(pile);

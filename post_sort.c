@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   post_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:23:15 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/10 15:37:17 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 15:29:21 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* POSITIONS */
-void	assign_pos(t_list **list, size_t len)
+void	assign_pos(t_list **list, int len)
 {
-	size_t	i;
+	int		i;
 	t_list	*tmp;
 
 	i = 0;
@@ -28,9 +27,9 @@ void	assign_pos(t_list **list, size_t len)
 	}
 }
 
-/*void	get_target_smallest(t_list **pile_a, size_t index_b, t_data *data)
+void	get_target_smallest(t_list **pile_a, t_data *data)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i++ < data->lena)
@@ -44,9 +43,9 @@ void	assign_pos(t_list **list, size_t len)
 	}
 }
 
-size_t	get_target(t_list **pile_a, size_t index_b, t_data *data)
+int	get_target(t_list **pile_a, int index_b, t_data *data)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i++ < data->lena)
@@ -60,14 +59,14 @@ size_t	get_target(t_list **pile_a, size_t index_b, t_data *data)
 	}
 	if (data->target_index != data->len)
 		return (data->target_pos);
-	get_target_smallest(pile_a, index_b, data);
+	get_target_smallest(pile_a, data);
 	return (data->target_pos);
-}*/
-
+}
+/*
 int	get_target(t_list **pile_a, int b_idx, t_data *data)
 {
 	t_list	*tmp_a;
-	size_t	i;
+	int		i;
 
 	tmp_a = *pile_a;
 	i = 0;
@@ -94,13 +93,13 @@ int	get_target(t_list **pile_a, int b_idx, t_data *data)
 		tmp_a = tmp_a->next;
 	}
 	return (data->target_pos);
-}
+}*/
 
 void	get_target_pos(t_list **pile_a, t_list **pile_b, t_data *data)
 {
-	int	target_pos;
+	int		target_pos;
 	t_list	*tmp;
-	size_t	i;
+	int		i;
 
 	i = 0;
 	tmp = *pile_b;
@@ -111,7 +110,6 @@ void	get_target_pos(t_list **pile_a, t_list **pile_b, t_data *data)
 	{
 		data->target_index = data->len;
 		target_pos = get_target(pile_a, tmp->index, data);
-		//printf("TARGETPOOOOOOOOOS = %i\n", target_pos);
 		tmp->target_pos = data->target_pos;
 		tmp = tmp->next;
 	}

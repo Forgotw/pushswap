@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:31:24 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/13 14:34:16 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/13 15:19:49 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_data	*ps_new_data(size_t lenght)
 {
 	t_data	*ps_data;
 
-	ps_data = malloc(sizeof (t_data *));
+	ps_data = malloc(sizeof (t_data));
 	if (!ps_data)
 		return (NULL);
 	ps_data->index = 0;
@@ -26,7 +26,6 @@ t_data	*ps_new_data(size_t lenght)
 	ps_data->lenb = 0;
 	ps_data->x = 0;
 	ps_data->y = 0;
-	ps_data->pile = 0;
 	return (ps_data);
 }
 
@@ -44,16 +43,13 @@ void	ps_find_data(t_data *ps_data, size_t i, size_t p)
 
 int	ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 {
-	size_t	top_i;
-	size_t	bot_i;
+	int	top_i;
+	int	bot_i;
 
 	top_i = 1;
 	bot_i = ps_data->len;
-	//printf("%p\n", pile_top);
-	//printf("Bizarre %p\n", pile_top->prev);
-	while (top_i <= ((ps_data->len / 2) +1))
+	while (top_i <= ((ps_data->len / 2) + 1))
 	{
-		//printf("Before\n");
 		if (pile_top->index >= ps_data->x && pile_top->index <= ps_data->y)
 		{
 			ps_find_data(ps_data, pile_top->index, top_i);
@@ -64,7 +60,6 @@ int	ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 			ps_find_data(ps_data, pile_bot->index, bot_i);
 			return (1);
 		}
-		//printf("Before\n");
 		pile_top = pile_top->next;
 		pile_bot = pile_bot->prev;
 		top_i++;
@@ -75,7 +70,7 @@ int	ps_find(t_data *ps_data, t_list *pile_top, t_list *pile_bot)
 
 void	ps_rotate_to_find(t_list **pile, t_data *ps_data)
 {
-	size_t	i;
+	int	i;
 
 	if (ps_find(ps_data, *pile, (*pile)->prev) == 0)
 		return ;

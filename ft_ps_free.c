@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ps_free.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:49:07 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/10 18:17:05 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 16:46:15 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ps_free(t_list **pile_a, t_data *ps_data)
+void	ps_free(t_list **pile_a, t_data *ps_data)
 {
 	t_list	*tmp;
-	size_t	i;
+	int		i;
 
 	if (!pile_a || !*pile_a)
 		return ;
@@ -29,9 +29,9 @@ void ps_free(t_list **pile_a, t_data *ps_data)
 	*pile_a = NULL;
 }
 
-void free_split(char **array, int argc)
+void	free_split(char **array, int argc)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (argc > 2)
@@ -43,4 +43,13 @@ void free_split(char **array, int argc)
 	}
 	if (array)
 		free(array);
+}
+
+int	free_tab_array(char **array, int *tab, int argc, int error)
+{
+	if (error == 1)
+		write(2, "Error\n", 6);
+	free_split(array, argc);
+	free(tab);
+	return (0);
 }

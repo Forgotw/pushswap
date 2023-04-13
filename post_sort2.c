@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   post_sort2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:14:01 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/10 18:08:42 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/13 14:59:04 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,21 @@
 
 void	assign_cost(t_list **pile_bb, t_data *data)
 {
-	size_t	i;
+	int	i;
 	t_list	*pile_b;
 	
 	i = 0;
 	pile_b = *pile_bb;
 	while (i++ < data->lenb)
 	{
-		//printf("test: pile_b pos: %i\n", (int)(*pile_bb)->pos);
 		pile_b->cost_b = (int)pile_b->pos;
 		if (pile_b->pos > (data->lenb / 2))
 			pile_b->cost_b = (int)((data->lenb - pile_b->pos) * -1);
 		pile_b->cost_a = (int)pile_b->target_pos;
 		if (pile_b->target_pos > (data->lena / 2))
 			pile_b->cost_a = (int)((data->lena - pile_b->target_pos) * -1);
-		//*pile_bb = pile_b;
-		//printf("testteeeeeeeeest: pile_bpos: %i cost_b: %i tmp_pos: %i cost_tmp: %i\n", (*pile_bb)->pos, (*pile_bb)->cost_b, pile_b->pos, pile_b->cost_b);
 		pile_b = pile_b->next;
-		//printf("testteeeeeeeeest: pile_bpos: %i cost_b: %i\n", (int)(*pile_bb)->pos, (int)(*pile_bb)->cost_b);
 	}
-	//*pile_bb = (*pile_bb)->next;
 }
 
 /*
@@ -46,20 +41,15 @@ void	assign_cost(t_list **pile_b, t_data *data)
 	i = 0;
 	while (i++ < data->lenb)
 	{
-		//printf("test: pile_b pos: %i\n", (int)(*pile_b)->pos);
 		(*pile_b)->cost_b = tmp->pos;
 		tmp->cost_b = tmp->pos;
-		//printf("testteeeeeeeeest: pile_bpos: %i cost_b: %i tmp_pos: %i cost_tmp: %i\n", (*pile_b)->pos, (*pile_b)->cost_b, tmp->pos, tmp->cost_b);
 		if ((*pile_b)->pos > (data->lenb / 2))
 			(*pile_b)->cost_b = ((data->lenb - (*pile_b)->pos) * -1);
 		(*pile_b)->cost_a = (*pile_b)->target_pos;
 		if ((*pile_b)->target_pos > (data->lena / 2))
 			(*pile_b)->cost_a = ((data->lena - (*pile_b)->target_pos) * -1);
-		//printf("testteeeeeeeeest: pile_bpos: %i cost_b: %i tmp_pos: %i cost_tmp: %i\n", (*pile_b)->pos, (*pile_b)->cost_b, tmp->pos, tmp->cost_b);
-		//*pile_b = (*pile_b)->next;
 		tmp = tmp->next;
 	}
-	//ft_printflist(NULL, *pile_b, data->lena, data->lenb);
 }*/
 
 /*
@@ -112,7 +102,7 @@ void	do_best_move(t_list **pile_a, t_list **pile_b, t_data *data)
 	t_list	*list;
 	int		cheapest;
 	int		cheapest_new;
-	size_t	i;
+	int	i;
 
 	i = 0;
 	cheapest = data->len + 1;
