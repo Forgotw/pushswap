@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:58:13 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/04/13 16:46:41 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/14 12:48:43 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include "../gnl/get_next_line.h"
 
 # define INT_MIN	-2147483648
 # define INT_MAX	2147483647
@@ -64,6 +65,16 @@ void		ft_rrb(t_list **pile);
 void		ft_rrr(t_list **pilea, t_list **pileb);
 void		ft_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data);
 void		ft_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void		checker_pa(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void		checker_pb(t_list **pile_a, t_list **pile_b, t_data *ps_data);
+void		checker_rrr(t_list **pile_a, t_list **pile_b);
+void		checker_rr(t_list **pile_a, t_list **pile_b);
+void		checker_ss(t_list **pile_a, t_list **pile_b);
+void		ft_r_rotate(t_list **pslist);
+void		ft_rotate(t_list **pslist);
+void		ft_swap(t_list **pile);
+size_t		ft_push(t_list **pile_s,
+				t_list **pile_d, size_t len_s, size_t len_d);
 int			ps_sorted_check(t_list *pile_a, t_data *ps_data);
 int			ps_where_is_last_sorted(t_list *pile_a, t_data *ps_data);
 void		ps_rotate_to_find(t_list **pile, t_data *ps_data);
@@ -89,6 +100,8 @@ void		do_best_move(t_list **pile_a, t_list **pile_b, t_data *data);
 void		do_move(t_list **pile_a, t_list **pile_b, t_data *data);
 void		rotate_to_first(t_list **pile_a, t_data *data);
 void		assign_pos(t_list **list, int len);
-int	free_tab_array(char **array, int *tab, int argc, int error);
+int			free_tab_array(char **array, int *tab, int argc, int error);
+void		pushswap(t_list **pile_a,
+				t_list **pile_b, t_data *ps_data);
 
 #endif

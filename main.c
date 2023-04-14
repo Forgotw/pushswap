@@ -6,29 +6,11 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:29:43 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/13 17:29:53 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/14 12:47:29 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-
-void	pushswap(t_list **pile_a, t_list **pile_b, t_data *ps_data)
-{
-	size_t	i;
-
-	i = 0;
-	ft_pre_sort(pile_a, pile_b, ps_data);
-	ps_sort_3(pile_a, ps_data);
-	while (ps_data->lenb > 0)
-	{
-		get_target_pos(pile_a, pile_b, ps_data);
-		assign_cost(pile_b, ps_data);
-		do_best_move(pile_a, pile_b, ps_data);
-		i++;
-	}
-	rotate_to_first(pile_a, ps_data);
-}
 
 int	main(int argc, char **argv)
 {

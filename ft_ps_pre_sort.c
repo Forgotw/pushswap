@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:19:36 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/04/13 15:21:52 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/14 12:56:36 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 	int	i;
 
 	ps_data->x = 1;
-	ps_data->y = (ps_data->len / 3);
+	ps_data->y = (ps_data->len / 2);
 	i = 1;
 	while (ps_data->lena > 3)
 	{
@@ -40,11 +40,11 @@ void	ft_pre_sort(t_list **pile_a, t_list **pile_b, t_data *ps_data)
 		if (i == ps_data->y)
 		{
 			ps_data->x = i + 1;
-			ps_data->y = i + (ps_data->lena / 3);
-			if ((ps_data->y - ps_data->x) < 3)
+			ps_data->y = i + (ps_data->lena / 2);
+			if ((ps_data->y - ps_data->x) < 10)
 			{
-				ps_data->y = ps_data->x + 2;
-				if (ps_data->len - ps_data->y < 3)
+				ps_data->y = ps_data->x + 10;
+				if (ps_data->len - ps_data->y < 10)
 					ps_data->y = ps_data->len - 3;
 			}
 		}

@@ -6,13 +6,13 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 13:05:01 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/13 15:23:53 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/14 11:27:55 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-static void	ft_rotate(t_list **pslist)
+void	ft_rotate(t_list **pslist)
 {
 	if (!pslist || (*pslist)->next == NULL)
 		return ;

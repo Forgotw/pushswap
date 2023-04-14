@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsohler@student.42.fr <lsohler>            +#+  +:+       +#+        */
+/*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:45:28 by lsohler@stu       #+#    #+#             */
-/*   Updated: 2023/01/05 13:07:07 by lsohler@stu      ###   ########.fr       */
+/*   Updated: 2023/04/14 11:28:02 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_swap(t_list **pile)
+void	ft_swap(t_list **pile)
 {
 	size_t	tmpindex;
 	int		tmpcontent;

@@ -6,7 +6,7 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:14:01 by lsohler           #+#    #+#             */
-/*   Updated: 2023/04/13 14:59:04 by lsohler          ###   ########.fr       */
+/*   Updated: 2023/04/14 12:59:22 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	assign_cost(t_list **pile_bb, t_data *data)
 {
-	int	i;
+	int		i;
 	t_list	*pile_b;
-	
+
 	i = 0;
 	pile_b = *pile_bb;
 	while (i++ < data->lenb)
@@ -31,115 +31,52 @@ void	assign_cost(t_list **pile_bb, t_data *data)
 	}
 }
 
-/*
-void	assign_cost(t_list **pile_b, t_data *data)
+int	calcul_cheapest(t_list *list)
 {
-	size_t	i;
-	t_list	*tmp;
+	int	cheapest_new;
 
-	tmp = *pile_b;
-	i = 0;
-	while (i++ < data->lenb)
+	if (list->cost_a <= 0 && list->cost_b <= 0)
 	{
-		(*pile_b)->cost_b = tmp->pos;
-		tmp->cost_b = tmp->pos;
-		if ((*pile_b)->pos > (data->lenb / 2))
-			(*pile_b)->cost_b = ((data->lenb - (*pile_b)->pos) * -1);
-		(*pile_b)->cost_a = (*pile_b)->target_pos;
-		if ((*pile_b)->target_pos > (data->lena / 2))
-			(*pile_b)->cost_a = ((data->lena - (*pile_b)->target_pos) * -1);
-		tmp = tmp->next;
+		if (list->cost_a <= list->cost_b)
+			cheapest_new = ft_abs(list->cost_a);
+		else
+			cheapest_new = ft_abs(list->cost_b);
 	}
-}*/
-
-/*
-void	assign_cost(t_list **pile_b, t_data *data)
-{
-	size_t	i;
-	
-	i = 0;
-	while (i++ < data->lenb)
+	else if (list->cost_a >= 0 && list->cost_b >= 0)
 	{
-		//printf("test: pile_b pos: %i\n", (int)(*pile_b)->pos);
-		(*pile_b)->cost_b = (int)(*pile_b)->pos;
-		//printf("testteeeeeeeeest: pile_bpos: %i cost_b: %i\n", (int)(*pile_b)->pos, (int)(*pile_b)->cost_b);
-		if ((*pile_b)->pos > (data->lenb / 2))
-			(*pile_b)->cost_b = (int)((data->lenb - (*pile_b)->pos) * -1);
-		(*pile_b)->cost_a = (int)(*pile_b)->target_pos;
-		if ((*pile_b)->target_pos > (data->lena / 2))
-			(*pile_b)->cost_a = (int)((data->lena - (*pile_b)->target_pos) * -1);
-		*pile_b = (*pile_b)->next;
+		if (list->cost_a >= list->cost_b)
+			cheapest_new = list->cost_a;
+		else
+			cheapest_new = list->cost_b;
 	}
-}*/
-
-
-/*void	do_best_move(t_list **pile_a, t_list **pile_b, t_data *data)
-{
-	t_list	*list;
-	int		cheapest;
-	size_t	i;
-
-	i = 0;
-	cheapest = data->len + 1;
-	list = *pile_b;
-	while (i++ < data->lenb)
+	else
 	{
-		//printf("test: pile_b cost_b: %i\n", (int)(*pile_b)->cost_b);
-		if (ft_abs(list->cost_a) + ft_abs(list->cost_b) < ft_abs(cheapest))
-		{
-			cheapest = ft_abs(list->cost_b) + ft_abs(list->cost_a);
-			data->cost_a = list->cost_a;
-			data->cost_b = list->cost_b;
-		}
-		list = list->next;
+		cheapest_new = ft_abs(list->cost_a) + ft_abs(list->cost_b);
 	}
-	//printf("test: pile_b cost_b: %i\n", (int)(*pile_b)->cost_b);
-	do_move(pile_a, pile_b, data);
-}*/
+	return (cheapest_new);
+}
 
 void	do_best_move(t_list **pile_a, t_list **pile_b, t_data *data)
 {
 	t_list	*list;
 	int		cheapest;
 	int		cheapest_new;
-	int	i;
+	int		i;
 
 	i = 0;
 	cheapest = data->len + 1;
 	list = *pile_b;
 	while (i++ < data->lenb)
 	{
-		if (list->cost_a <= 0 && list->cost_b <= 0)
-		{
-			//printf("test\n");
-			if (list->cost_a <= list->cost_b)
-				cheapest_new = ft_abs(list->cost_a);
-			else
-				cheapest_new = ft_abs(list->cost_b);
-		}
-		else if (list->cost_a >= 0 && list->cost_b >= 0)
-		{
-			//printf("test2\n");
-			if (list->cost_a >= list->cost_b)
-				cheapest_new = list->cost_a;
-			else
-				cheapest_new = list->cost_b;
-		}
-		else
-		{
-			//printf("test3\n");
-			cheapest_new = ft_abs(list->cost_a) + ft_abs(list->cost_b);
-		}
+		cheapest_new = calcul_cheapest(list);
 		if (cheapest_new < cheapest)
 		{
-			//printf("test4: %i\n", cheapest);
 			cheapest = cheapest_new;
 			data->cost_a = list->cost_a;
 			data->cost_b = list->cost_b;
 		}
 		list = list->next;
 	}
-	//printf("test: pile_b cost_b: %i\n", (int)(*pile_b)->cost_b);
 	do_move(pile_a, pile_b, data);
 }
 
@@ -165,4 +102,21 @@ void	rotate_to_first(t_list **pile_a, t_data *data)
 			ft_rra(pile_a);
 		i++;
 	}
+}
+
+void	pushswap(t_list **pile_a, t_list **pile_b, t_data *ps_data)
+{
+	size_t	i;
+
+	i = 0;
+	ft_pre_sort(pile_a, pile_b, ps_data);
+	ps_sort_3(pile_a, ps_data);
+	while (ps_data->lenb > 0)
+	{
+		get_target_pos(pile_a, pile_b, ps_data);
+		assign_cost(pile_b, ps_data);
+		do_best_move(pile_a, pile_b, ps_data);
+		i++;
+	}
+	rotate_to_first(pile_a, ps_data);
 }
